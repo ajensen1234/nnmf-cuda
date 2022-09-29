@@ -33,3 +33,18 @@ void nnmf::print_W(){
 void nnmf::print_V(){
     V_->print_matrix();
 }
+
+matrix* nnmf::H_mult_num(matrix* W_n, matrix* V, matrix* H_n){
+    return matrix::mat_mult(W_n->transpose(),V);
+}
+
+matrix* nnmf::H_mult_den(matrix* W_n, matrix* V, matrix* H_n){
+    return matrix::mat_mult(matrix::mat_mult(W_n->transpose(),W_n),H_n);
+}
+
+matrix* nnmf::W_mult_num(matrix* W_n, matrix* V, matrix* H_n){
+    return matrix::mat_mult(V,H_n->transpose());
+}
+matrix* nnmf::W_mult_den(matrix* W_n, matrix* V, matrix* H_n){
+    return matrix::mat_mult(matrix::mat_mult(W_n,H_n),H_n->transpose());
+}

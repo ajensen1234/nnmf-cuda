@@ -11,13 +11,4 @@ int main(){
 
 
     std::shared_ptr<nnmf> NNMF  = std::make_shared<nnmf>();;
-    NNMF->Initialize(fname, 3, ',');
-    std::cout << std::endl;
-    NNMF->print_H();
-    std::cout << std::endl;
-    NNMF->print_V();
-    std::cout << std::endl;
-    NNMF->print_W();    
-    std::cout << std::endl;
-    
 }

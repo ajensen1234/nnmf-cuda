@@ -17,6 +17,10 @@ public:
     void print_V();
     void print_W();
     void print_H();
+    matrix* H_mult_num(matrix* W_n, matrix* V, matrix* H_n);
+    matrix* H_mult_den(matrix* W_n, matrix* V, matrix* H_n);
+    matrix* W_mult_num(matrix* W_n, matrix* V, matrix* H_n);
+    matrix* W_mult_den(matrix* W_n, matrix* V, matrix* H_np1);
 
 private:
     std::shared_ptr<matrix> V_, W_, H_;
