@@ -1,0 +1,251 @@
+\hypertarget{nnmf___jessica_8m}{}\doxysection{examples/nnmf\+\_\+\+Jessica.m File Reference}
+\label{nnmf___jessica_8m}\index{examples/nnmf\_Jessica.m@{examples/nnmf\_Jessica.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+NNMF finds nonnegative \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}} and nonnegative coefficient \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}} such that V $\sim$WH The algorithm solves the problem of \mbox{\hyperlink{nnmf___jessica_8m_a1e2340d89d156481366d40d17aec4e69}{minimizing}} (V-\/WH)$^\wedge$2 by varying \mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}} and H. \% \% \% Multiplicative update rules developed by Lee and Seung were used to solve \% optimization problem.(see reference below) \% D. D. Lee and H. S. Seung. Algorithms for non-\/negative \mbox{\hyperlink{classmatrix}{matrix}} \% factorization. Adv. Neural Info. Proc. Syst. 13
+\item 
+2001 \mbox{\hyperlink{nnmf___jessica_8m_aae96e68535e6cff3dfa6e1e8084ba16f}{INPUTS\+:\+OUTPUTS\+:\+GTO\+:\+Created\+:modification\+:\+Modifications\+:\+JLA\+:\+JLA\+:}} (3=lab generated Lee and Seung code method,\mbox{[}OUTPUTS\mbox{]} V-\/WH and,\mbox{[}GTO\mbox{]} id,\mbox{[}Created\mbox{]} id Last,\mbox{[}modification\mbox{]} id conditions,\mbox{[}Modifications\mbox{]} id,\mbox{[}JLA\mbox{]} id normalization,\mbox{[}JLA\mbox{]} id flag\+Std)
+\item 
+\mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf___jessica_8m_a8d9edef20badb0308c7780c8942a74e6}{length}} (\mbox{\hyperlink{nnmf___jessica_8m_a882cd556fd5182c1e9f38dcb950be3c8}{err\+\_\+save}})$>$550 err\+\_\+change
+\item 
+id \mbox{\hyperlink{nnmf___jessica_8m_abe78ffd4956fb08518b13ecccb129567}{synergies}} ()
+\item 
+\mbox{\hyperlink{nnmf___jessica_8m_a4fd17e0dd054470d2955833d3fe3344e}{W}} (\+:, \mbox{\hyperlink{nnmf___jessica_8m_a3c4d8e3f704c0228c19a3876ae8fcb7d}{i}})
+\item 
+elseif \mbox{\hyperlink{nnmf___jessica_8m_a4878137066d768eff393fd445a3a4a73}{ind\+\_\+cond}} (\mbox{\hyperlink{nnmf___jessica_8m_afc4a9b0a40fb7e2c5d7e1592ac9703fd}{l}})
+\item 
+elseif \mbox{\hyperlink{nnmf___jessica_8m_ae1c2424c65e06273b70836524ef2c329}{ind}} (\mbox{\hyperlink{nnmf___jessica_8m_afc4a9b0a40fb7e2c5d7e1592ac9703fd}{l}})
+\item 
+\mbox{\hyperlink{nnmf___jessica_8m_aa91d78070ace986f46a20ab9793c6db4}{zeros}} (1, r)\mbox{]}
+\item 
+\mbox{\hyperlink{nnmf___jessica_8m_a925baf6d765f2caa4670f4d9522a6d21}{W}} (k\+:end,\+:)\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{nnmf___jessica_8m_a4c5a3b3839dc23c6b9a485ce1c3ec1fd}{function}} \mbox{[}\mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}}, \mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}}, \mbox{\hyperlink{nnmf___jessica_8m_a52482fdd3721e7db69dc740aefee8ad4}{err}}\mbox{]}
+\item 
+\mbox{\hyperlink{nnmf___jessica_8m_a54854a62a6428281d62fa86d19adb19a}{flag\+Method}} = 1
+\item 
+elseif nargin$<$ 4 \mbox{\hyperlink{nnmf___jessica_8m_a54854a62a6428281d62fa86d19adb19a}{flag\+Method}}=1;endV=V.$\ast$(V $>$0);\% Any potential negative entry in data \mbox{\hyperlink{classmatrix}{matrix}} will be set to zerotest=nansum(V, 2);\% Any potential muscle channnel with only 0 \textquotesingle{}s is not included in the \mbox{\hyperlink{nnmf___jessica_8m_a97f9c2753f848b831c6c8f7ba42f5339}{iteration}} index=find(test$\sim$=0);\mbox{\hyperlink{nnmf___jessica_8m_ae1c2424c65e06273b70836524ef2c329}{ind}}=find(test==0);Vnew\+\_\+m=V(index,\+:);test\+\_\+cond=nansum(V, 1);\% Any potential condition with only 0 \textquotesingle{}s is not included in the \mbox{\hyperlink{nnmf___jessica_8m_a97f9c2753f848b831c6c8f7ba42f5339}{iteration}} index\+\_\+cond=find(test\+\_\+cond$\sim$=0);\mbox{\hyperlink{nnmf___jessica_8m_a4878137066d768eff393fd445a3a4a73}{ind\+\_\+cond}}=find(test\+\_\+cond==0);\mbox{\hyperlink{nnmf___jessica_8m_a7e5e9f4d38dfd70988a9c43efa23af45}{Vnew}}=Vnew\+\_\+m(\+:, index\+\_\+cond);\%\%\%\%\% Scale the input data to have unit variance \%\%\%\%\%\%\%\%\%\mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} flag\+Std==1;stdev=std(\mbox{\hyperlink{nnmf___jessica_8m_a7e5e9f4d38dfd70988a9c43efa23af45}{Vnew}}\textquotesingle{});\%scale the data to have unit variance of this data set elseif flag\+Std==2;global stdev \% use this \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} you want to use the stdev(unit variance scaling) from a different data setend\+Vnew=diag(1./stdev) $\ast$\mbox{\hyperlink{nnmf___jessica_8m_a7e5e9f4d38dfd70988a9c43efa23af45}{Vnew}};\mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf___jessica_8m_a54854a62a6428281d62fa86d19adb19a}{flag\+Method}}==1 opts=statset( \textquotesingle{}Max\+Iter\textquotesingle{}, 1000, \textquotesingle{}Tol\+Fun\textquotesingle{}, 1e-\/6, \textquotesingle{}TolX\textquotesingle{}, 1e-\/4);\mbox{[}\mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}}, \mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}}, \mbox{\hyperlink{nnmf___jessica_8m_a52482fdd3721e7db69dc740aefee8ad4}{err}}\mbox{]}=\mbox{\hyperlink{classnnmf}{nnmf}}(\mbox{\hyperlink{nnmf___jessica_8m_a7e5e9f4d38dfd70988a9c43efa23af45}{Vnew}}, r, \textquotesingle{}\mbox{\hyperlink{nnmf_8m_a3a76cbb6e504bf475810f39404bbf3d0}{alg}}\textquotesingle{}, \textquotesingle{}mult\textquotesingle{}, \textquotesingle{}rep\textquotesingle{}, 50, \textquotesingle{}options\textquotesingle{}, opts);\%\mbox{[}\mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}}, \mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}}, \mbox{\hyperlink{nnmf___jessica_8m_a52482fdd3721e7db69dc740aefee8ad4}{err}}\mbox{]}=\mbox{\hyperlink{classnnmf}{nnmf}}(\mbox{\hyperlink{nnmf___jessica_8m_a7e5e9f4d38dfd70988a9c43efa23af45}{Vnew}}, r, \textquotesingle{}\mbox{\hyperlink{nnmf_8m_a3a76cbb6e504bf475810f39404bbf3d0}{alg}}\textquotesingle{}, \textquotesingle{}mult\textquotesingle{}, \textquotesingle{}rep\textquotesingle{}, 50);elseif \mbox{\hyperlink{nnmf___jessica_8m_a54854a62a6428281d62fa86d19adb19a}{flag\+Method}}==2\mbox{[}\mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}}, \mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}}, \mbox{\hyperlink{nnmf___jessica_8m_a52482fdd3721e7db69dc740aefee8ad4}{err}}\mbox{]}=\mbox{\hyperlink{classnnmf}{nnmf}}(\mbox{\hyperlink{nnmf___jessica_8m_a7e5e9f4d38dfd70988a9c43efa23af45}{Vnew}}, r, \textquotesingle{}\mbox{\hyperlink{nnmf_8m_a3a76cbb6e504bf475810f39404bbf3d0}{alg}}\textquotesingle{}, \textquotesingle{}als\textquotesingle{}, \textquotesingle{}rep\textquotesingle{}, 50);elseif \mbox{\hyperlink{nnmf___jessica_8m_a54854a62a6428281d62fa86d19adb19a}{flag\+Method}}==3 \% Initial conditions.\mbox{[}n, \mbox{\hyperlink{nnmf___jessica_8m_a376132b4f62ec2aeb6be80c0e506b27e}{m}}\mbox{]}=\mbox{\hyperlink{nnmf_8m_a5144f11414a742574b0b4aeb7fd3f7f6}{size}}(\mbox{\hyperlink{nnmf___jessica_8m_a7e5e9f4d38dfd70988a9c43efa23af45}{Vnew}});\mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}}=rand(r, \mbox{\hyperlink{nnmf___jessica_8m_a376132b4f62ec2aeb6be80c0e506b27e}{m}});\mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}}=rand(n, r);\mbox{\hyperlink{nnmf___jessica_8m_a52482fdd3721e7db69dc740aefee8ad4}{err}}=sum(sum((\mbox{\hyperlink{nnmf___jessica_8m_a7e5e9f4d38dfd70988a9c43efa23af45}{Vnew}}-\/\mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}} $\ast$\mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}}).$^\wedge$2));MAX\+\_\+\+IT=100000;\% Increased this from 10000 to 100000 \% Error goal -\/ the \char`\"{}err\char`\"{} quantity, as defined, is the squared error. If we \% want a 1\% mse, then, we want .\+01 $\ast$prod(\mbox{\hyperlink{nnmf_8m_a5144f11414a742574b0b4aeb7fd3f7f6}{size}}(V))=.\+01 $\ast$n $\ast$m. ERR\+\_\+\+GOAL=.\+0001 $\ast$(n $\ast$\mbox{\hyperlink{nnmf___jessica_8m_a376132b4f62ec2aeb6be80c0e506b27e}{m}});\% Update... For normed data, the max \mbox{\hyperlink{nnmf___jessica_8m_a52482fdd3721e7db69dc740aefee8ad4}{err}} is n \mbox{\hyperlink{nnmf_8m_aa010110f98c319fdcf8693409a4c7bca}{x}} \mbox{\hyperlink{nnmf___jessica_8m_a376132b4f62ec2aeb6be80c0e506b27e}{m}} \mbox{\hyperlink{nnmf___jessica_8m_a882cd556fd5182c1e9f38dcb950be3c8}{err\+\_\+save}}=\mbox{[}$\,$\mbox{]};while \mbox{\hyperlink{nnmf___jessica_8m_a52482fdd3721e7db69dc740aefee8ad4}{err}} $>$ ERR\+\_\+\+GOAL \mbox{\hyperlink{nnmf___jessica_8m_ab7c55957d6f67ac132cc2e28e30c86b7}{H\+\_\+fac}} =\mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}}\textquotesingle{}$\ast$\mbox{\hyperlink{nnmf___jessica_8m_a7e5e9f4d38dfd70988a9c43efa23af45}{Vnew}}
+\item 
+\mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}} =H.$\ast$\mbox{\hyperlink{nnmf___jessica_8m_ab7c55957d6f67ac132cc2e28e30c86b7}{H\+\_\+fac}}
+\item 
+\mbox{\hyperlink{nnmf___jessica_8m_a098488459cffedb7a5e8a895ae4d96f6}{W\+\_\+fac}} =\mbox{\hyperlink{nnmf___jessica_8m_a7e5e9f4d38dfd70988a9c43efa23af45}{Vnew}}$\ast$\mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}}\textquotesingle{}
+\item 
+\mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}} =W.$\ast$\mbox{\hyperlink{nnmf___jessica_8m_a098488459cffedb7a5e8a895ae4d96f6}{W\+\_\+fac}}
+\item 
+\mbox{\hyperlink{nnmf___jessica_8m_a52482fdd3721e7db69dc740aefee8ad4}{err}} =sum(sum((\mbox{\hyperlink{nnmf___jessica_8m_a7e5e9f4d38dfd70988a9c43efa23af45}{Vnew}}-\/\mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}}$\ast$\mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}}).$^\wedge$2))
+\item 
+\mbox{\hyperlink{nnmf___jessica_8m_a882cd556fd5182c1e9f38dcb950be3c8}{err\+\_\+save}} =\mbox{[}err\+\_\+save
+\item 
+add in zero \mbox{\hyperlink{nnmf___jessica_8m_a626245d1bec685f0132a6c0dd26c9ae4}{rows}}
+\item 
+calculate final error undo the unit variance scaling so \mbox{\hyperlink{nnmf___jessica_8m_abe78ffd4956fb08518b13ecccb129567}{synergies}} are back out of unit variance space and in the same scaling as the input data was \mbox{\hyperlink{nnmf___jessica_8m_a7e5e9f4d38dfd70988a9c43efa23af45}{Vnew}} = diag(stdev)$\ast$Vnew
+\item 
+Synergy vectors normailzation \mbox{\hyperlink{nnmf___jessica_8m_a376132b4f62ec2aeb6be80c0e506b27e}{m}} =max(\mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}})
+\item 
+vector with max activation values for \mbox{\hyperlink{nnmf___jessica_8m_a3c4d8e3f704c0228c19a3876ae8fcb7d}{i}}
+\item 
+end Set to NaN the columns or \mbox{\hyperlink{nnmf___jessica_8m_a626245d1bec685f0132a6c0dd26c9ae4}{rows}} that were not included in the \mbox{\hyperlink{nnmf___jessica_8m_a97f9c2753f848b831c6c8f7ba42f5339}{iteration}} \mbox{[}n\+\_\+o, m\+\_\+o\mbox{]} =\mbox{\hyperlink{nnmf_8m_a5144f11414a742574b0b4aeb7fd3f7f6}{size}}(V)
+\item 
+\mbox{\hyperlink{nnmf___jessica_8m_a99570fc726dce1df15252cd2499bbee3}{Hnew}} =\mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{nnmf___jessica_8m_a640c51979801dbbcb4816e1e9f306f89}{Wnew}} =\mbox{[}$\,$\mbox{]}
+\item 
+for \mbox{\hyperlink{nnmf___jessica_8m_afc4a9b0a40fb7e2c5d7e1592ac9703fd}{l}}
+\item 
+else for \mbox{\hyperlink{nnmf___jessica_8m_a35a892e11201b49e063b0ddf475c1c9c}{k}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{nnmf___jessica_8m_ae1c2424c65e06273b70836524ef2c329}\label{nnmf___jessica_8m_ae1c2424c65e06273b70836524ef2c329}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!ind@{ind}}
+\index{ind@{ind}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{ind()}{ind()}}
+{\footnotesize\ttfamily elseif ind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{nnmf___jessica_8m_afc4a9b0a40fb7e2c5d7e1592ac9703fd}{l}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_a4878137066d768eff393fd445a3a4a73}\label{nnmf___jessica_8m_a4878137066d768eff393fd445a3a4a73}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!ind\_cond@{ind\_cond}}
+\index{ind\_cond@{ind\_cond}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{ind\_cond()}{ind\_cond()}}
+{\footnotesize\ttfamily elseif ind\+\_\+cond (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{nnmf___jessica_8m_afc4a9b0a40fb7e2c5d7e1592ac9703fd}{l}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_aae96e68535e6cff3dfa6e1e8084ba16f}\label{nnmf___jessica_8m_aae96e68535e6cff3dfa6e1e8084ba16f}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!INPUTS:OUTPUTS:GTO:Created:modification:Modifications:JLA:JLA:@{INPUTS:OUTPUTS:GTO:Created:modification:Modifications:JLA:JLA:}}
+\index{INPUTS:OUTPUTS:GTO:Created:modification:Modifications:JLA:JLA:@{INPUTS:OUTPUTS:GTO:Created:modification:Modifications:JLA:JLA:}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{INPUTS:OUTPUTS:GTO:Created:modification:Modifications:JLA:JLA:()}{INPUTS:OUTPUTS:GTO:Created:modification:Modifications:JLA:JLA:()}}
+{\footnotesize\ttfamily 2001 INPUTS\+:\+OUTPUTS\+:\+GTO\+:\+Created\+:modification\+:\+Modifications\+:\+JLA\+:\+JLA\+: (\begin{DoxyParamCaption}\item[{3}]{ = {\ttfamily lab~generated~Lee~and~Seung~code~method},  }\item[{\mbox{[}\+OUTPUTS\mbox{]} V-\/WH}]{and,  }\item[{\mbox{[}\+GTO\mbox{]} id}]{,  }\item[{\mbox{[}\+Created\mbox{]} id}]{Last,  }\item[{\mbox{[}modification\mbox{]} id}]{conditions,  }\item[{\mbox{[}\+Modifications\mbox{]} id}]{,  }\item[{\mbox{[}\+JLA\mbox{]} id}]{normalization,  }\item[{\mbox{[}\+JLA\mbox{]} id}]{flag\+Std }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_a8d9edef20badb0308c7780c8942a74e6}\label{nnmf___jessica_8m_a8d9edef20badb0308c7780c8942a74e6}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!length@{length}}
+\index{length@{length}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{nnmf___jessica_8m_a882cd556fd5182c1e9f38dcb950be3c8}{err\+\_\+save}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_a1e2340d89d156481366d40d17aec4e69}\label{nnmf___jessica_8m_a1e2340d89d156481366d40d17aec4e69}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!minimizing@{minimizing}}
+\index{minimizing@{minimizing}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{minimizing()}{minimizing()}}
+{\footnotesize\ttfamily NNMF finds nonnegative \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}} and nonnegative coefficient \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}} such that V $\sim$WH The algorithm solves the problem of minimizing (\begin{DoxyParamCaption}\item[{V-\/}]{WH }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_abe78ffd4956fb08518b13ecccb129567}\label{nnmf___jessica_8m_abe78ffd4956fb08518b13ecccb129567}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!synergies@{synergies}}
+\index{synergies@{synergies}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{synergies()}{synergies()}}
+{\footnotesize\ttfamily id synergies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_a4fd17e0dd054470d2955833d3fe3344e}\label{nnmf___jessica_8m_a4fd17e0dd054470d2955833d3fe3344e}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!W@{W}}
+\index{W@{W}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{W()}{W()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily W (\begin{DoxyParamCaption}\item[{\+:}]{,  }\item[{\mbox{\hyperlink{nnmf___jessica_8m_a3c4d8e3f704c0228c19a3876ae8fcb7d}{i}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_a925baf6d765f2caa4670f4d9522a6d21}\label{nnmf___jessica_8m_a925baf6d765f2caa4670f4d9522a6d21}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!W@{W}}
+\index{W@{W}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{W()}{W()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily W (\begin{DoxyParamCaption}\item[{k\+:end}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_aa91d78070ace986f46a20ab9793c6db4}\label{nnmf___jessica_8m_aa91d78070ace986f46a20ab9793c6db4}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!zeros@{zeros}}
+\index{zeros@{zeros}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{zeros()}{zeros()}}
+{\footnotesize\ttfamily zeros (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{r}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{nnmf___jessica_8m_a52482fdd3721e7db69dc740aefee8ad4}\label{nnmf___jessica_8m_a52482fdd3721e7db69dc740aefee8ad4}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!err@{err}}
+\index{err@{err}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{err}{err}}
+{\footnotesize\ttfamily err =sum(sum((\mbox{\hyperlink{nnmf___jessica_8m_a7e5e9f4d38dfd70988a9c43efa23af45}{Vnew}}-\/\mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}}$\ast$\mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}}).$^\wedge$2))}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_a882cd556fd5182c1e9f38dcb950be3c8}\label{nnmf___jessica_8m_a882cd556fd5182c1e9f38dcb950be3c8}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!err\_save@{err\_save}}
+\index{err\_save@{err\_save}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{err\_save}{err\_save}}
+{\footnotesize\ttfamily err\+\_\+save =\mbox{[}err\+\_\+save}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_a54854a62a6428281d62fa86d19adb19a}\label{nnmf___jessica_8m_a54854a62a6428281d62fa86d19adb19a}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!flagMethod@{flagMethod}}
+\index{flagMethod@{flagMethod}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{flagMethod}{flagMethod}}
+{\footnotesize\ttfamily flag\+Method = 1}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_a4c5a3b3839dc23c6b9a485ce1c3ec1fd}\label{nnmf___jessica_8m_a4c5a3b3839dc23c6b9a485ce1c3ec1fd}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!function@{function}}
+\index{function@{function}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}}, \mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}}, \mbox{\hyperlink{nnmf___jessica_8m_a52482fdd3721e7db69dc740aefee8ad4}{err}}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= nnmf\_Jessica(V, r, flagStd, \mbox{\hyperlink{nnmf___jessica_8m_a54854a62a6428281d62fa86d19adb19a}{flagMethod}})}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\% [W, H, err] = nnmf\_Jessica(V, r, flagStd, \mbox{\hyperlink{nnmf___jessica_8m_a54854a62a6428281d62fa86d19adb19a}{flagMethod}})}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\% NNMF: Given a nonnegative \mbox{\hyperlink{classmatrix}{matrix}} V}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}\label{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!H@{H}}
+\index{H@{H}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{H}{H}}
+{\footnotesize\ttfamily H =H.$\ast$\mbox{\hyperlink{nnmf___jessica_8m_ab7c55957d6f67ac132cc2e28e30c86b7}{H\+\_\+fac}}}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_ab7c55957d6f67ac132cc2e28e30c86b7}\label{nnmf___jessica_8m_ab7c55957d6f67ac132cc2e28e30c86b7}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!H\_fac@{H\_fac}}
+\index{H\_fac@{H\_fac}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{H\_fac}{H\_fac}}
+{\footnotesize\ttfamily H\+\_\+fac =\mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}}\textquotesingle{}$\ast$\mbox{\hyperlink{nnmf___jessica_8m_a7e5e9f4d38dfd70988a9c43efa23af45}{Vnew}}}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_a99570fc726dce1df15252cd2499bbee3}\label{nnmf___jessica_8m_a99570fc726dce1df15252cd2499bbee3}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!Hnew@{Hnew}}
+\index{Hnew@{Hnew}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{Hnew}{Hnew}}
+{\footnotesize\ttfamily break else Hnew =\mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_a3c4d8e3f704c0228c19a3876ae8fcb7d}\label{nnmf___jessica_8m_a3c4d8e3f704c0228c19a3876ae8fcb7d}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!i@{i}}
+\index{i@{i}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily vector with max activation values for i}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=1:r}
+\DoxyCodeLine{    \mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}}(\mbox{\hyperlink{nnmf___jessica_8m_a3c4d8e3f704c0228c19a3876ae8fcb7d}{i}},:)=\mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}}(\mbox{\hyperlink{nnmf___jessica_8m_a3c4d8e3f704c0228c19a3876ae8fcb7d}{i}},:)*\mbox{\hyperlink{nnmf___jessica_8m_a376132b4f62ec2aeb6be80c0e506b27e}{m}}(\mbox{\hyperlink{nnmf___jessica_8m_a3c4d8e3f704c0228c19a3876ae8fcb7d}{i}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{nnmf___jessica_8m_a97f9c2753f848b831c6c8f7ba42f5339}\label{nnmf___jessica_8m_a97f9c2753f848b831c6c8f7ba42f5339}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!iteration@{iteration}}
+\index{iteration@{iteration}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{iteration}{iteration}}
+{\footnotesize\ttfamily end Set to NaN the columns or \mbox{\hyperlink{nnmf___jessica_8m_a626245d1bec685f0132a6c0dd26c9ae4}{rows}} that were not included in the iteration\mbox{[}n\+\_\+o, m\+\_\+o\mbox{]} =\mbox{\hyperlink{nnmf_8m_a5144f11414a742574b0b4aeb7fd3f7f6}{size}}(V)}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_a35a892e11201b49e063b0ddf475c1c9c}\label{nnmf___jessica_8m_a35a892e11201b49e063b0ddf475c1c9c}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!k@{k}}
+\index{k@{k}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily else for k}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=1:m\_o}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} \mbox{\hyperlink{nnmf___jessica_8m_a4878137066d768eff393fd445a3a4a73}{ind\_cond}}(\mbox{\hyperlink{nnmf___jessica_8m_afc4a9b0a40fb7e2c5d7e1592ac9703fd}{l}})==\mbox{\hyperlink{nnmf___jessica_8m_a35a892e11201b49e063b0ddf475c1c9c}{k}}}
+\DoxyCodeLine{                \mbox{\hyperlink{nnmf___jessica_8m_a99570fc726dce1df15252cd2499bbee3}{Hnew}}=[H(:,1:k-\/1) zeros(r,1) H(:,k:end)]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{nnmf___jessica_8m_afc4a9b0a40fb7e2c5d7e1592ac9703fd}\label{nnmf___jessica_8m_afc4a9b0a40fb7e2c5d7e1592ac9703fd}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!l@{l}}
+\index{l@{l}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{l}{l}}
+{\footnotesize\ttfamily end end end end for l}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=1:\mbox{\hyperlink{nnmf___jessica_8m_a8d9edef20badb0308c7780c8942a74e6}{length}}(\mbox{\hyperlink{nnmf___jessica_8m_a4878137066d768eff393fd445a3a4a73}{ind\_cond}})}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} \mbox{\hyperlink{nnmf___jessica_8m_a4878137066d768eff393fd445a3a4a73}{ind\_cond}}(\mbox{\hyperlink{nnmf___jessica_8m_afc4a9b0a40fb7e2c5d7e1592ac9703fd}{l}})==1}
+\DoxyCodeLine{        \mbox{\hyperlink{nnmf___jessica_8m_a99570fc726dce1df15252cd2499bbee3}{Hnew}}=[zeros(r,1) H]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{nnmf___jessica_8m_a376132b4f62ec2aeb6be80c0e506b27e}\label{nnmf___jessica_8m_a376132b4f62ec2aeb6be80c0e506b27e}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!m@{m}}
+\index{m@{m}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily Synergy vectors normailzation m =max(\mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}})}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_a626245d1bec685f0132a6c0dd26c9ae4}\label{nnmf___jessica_8m_a626245d1bec685f0132a6c0dd26c9ae4}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!rows@{rows}}
+\index{rows@{rows}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{rows}{rows}}
+{\footnotesize\ttfamily add in zero rows}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_a7e5e9f4d38dfd70988a9c43efa23af45}\label{nnmf___jessica_8m_a7e5e9f4d38dfd70988a9c43efa23af45}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!Vnew@{Vnew}}
+\index{Vnew@{Vnew}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{Vnew}{Vnew}}
+{\footnotesize\ttfamily calculate final error undo the unit variance scaling so \mbox{\hyperlink{nnmf___jessica_8m_abe78ffd4956fb08518b13ecccb129567}{synergies}} are back out of unit variance space and in the same scaling as the input data was Vnew = diag(stdev)$\ast$Vnew}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}\label{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!W@{W}}
+\index{W@{W}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{W}{W}}
+{\footnotesize\ttfamily W =W.$\ast$\mbox{\hyperlink{nnmf___jessica_8m_a098488459cffedb7a5e8a895ae4d96f6}{W\+\_\+fac}}}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_a098488459cffedb7a5e8a895ae4d96f6}\label{nnmf___jessica_8m_a098488459cffedb7a5e8a895ae4d96f6}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!W\_fac@{W\_fac}}
+\index{W\_fac@{W\_fac}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{W\_fac}{W\_fac}}
+{\footnotesize\ttfamily W\+\_\+fac =\mbox{\hyperlink{nnmf___jessica_8m_a7e5e9f4d38dfd70988a9c43efa23af45}{Vnew}}$\ast$\mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}}\textquotesingle{}}
+
+\mbox{\Hypertarget{nnmf___jessica_8m_a640c51979801dbbcb4816e1e9f306f89}\label{nnmf___jessica_8m_a640c51979801dbbcb4816e1e9f306f89}} 
+\index{nnmf\_Jessica.m@{nnmf\_Jessica.m}!Wnew@{Wnew}}
+\index{Wnew@{Wnew}!nnmf\_Jessica.m@{nnmf\_Jessica.m}}
+\doxysubsubsection{\texorpdfstring{Wnew}{Wnew}}
+{\footnotesize\ttfamily break else Wnew =\mbox{[}$\,$\mbox{]}}
+

@@ -1,0 +1,623 @@
+\hypertarget{nnmf_8m}{}\doxysection{examples/nnmf.m File Reference}
+\label{nnmf_8m}\index{examples/nnmf.m@{examples/nnmf.m}}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{nnmf_8m_aa010110f98c319fdcf8693409a4c7bca}{x}} = rand(100, 20) $\ast$rand(20, 50)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+A, K, \textquotesingle{}PARAM1\textquotesingle{}, val1, \textquotesingle{}PARAM2\textquotesingle{}, val2,... \mbox{\hyperlink{nnmf_8m_af5f51f15b527fc9341d424c0d6055b22}{pairs\+:fields\+:\+NOTE\+:\+Examples\+:}} (default 1 following,\mbox{[}fields\mbox{]} the default PARALLELSTATS,\mbox{[}NOTE\mbox{]} depending \mbox{\hyperlink{nnmf_8m_a58ab1fd68e97078232808206b850161b}{on}} your installation and preferences TRUE,\mbox{[}Examples\mbox{]} meas, 2 \mbox{\hyperlink{classnnmf}{nnmf}})
+\item 
+\mbox{\hyperlink{nnmf_8m_aca2f6784d0d79b1b68c1d1d2be0baa23}{biplot}} (max(\mbox{\hyperlink{nnmf_8m_a572953ea011800ee6ea385fc04bd6a15}{w}}(\+:)) $\ast$\mbox{\hyperlink{nnmf_8m_aeaa46e7726a6a7e4a0a3c900767e1d9c}{h}}\textquotesingle{}, \textquotesingle{}Var\+Labels\textquotesingle{},\{ \textquotesingle{}sl\textquotesingle{} \textquotesingle{}sw\textquotesingle{} \textquotesingle{}pl\textquotesingle{} \textquotesingle{}pw\textquotesingle{}\}, \textquotesingle{}positive\textquotesingle{}, true)
+\item 
+\mbox{\hyperlink{nnmf_8m_a963bf4ec8b0ce3c752408afd200a9606}{axis}} (\mbox{[}0 12 0 12\mbox{]})
+\item 
+\mbox{\hyperlink{nnmf_8m_a2f64f158fe8691bf7449340ccf093fde}{legend}} (\mbox{\hyperlink{nnmf_8m_a5d9dd41a50edb71e9d63c67852759eb0}{h\+Lines}}) \% \% \% Try a few iterations at several replicates using the \% \% multiplicative algorithm
+\item 
+id \mbox{\hyperlink{nnmf_8m_af83bf6cd0d8bf84c1d426452eee4e2c7}{Reference\+:}} (2007 varargin)
+\item 
+end \mbox{\hyperlink{nnmf_8m_aac9ae037154a656732db2f665f6c5bcf}{narginchk}} (2, Inf)
+\item 
+\mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_ac10134e7927e8587c77ad1a59d4b6b67}{$\sim$isscalar}} (\mbox{\hyperlink{nnmf_8m_a35a892e11201b49e063b0ddf475c1c9c}{k}})$\vert$$\vert$$\sim$isnumeric(\mbox{\hyperlink{nnmf_8m_a35a892e11201b49e063b0ddf475c1c9c}{k}})$\vert$$\vert$\mbox{\hyperlink{nnmf_8m_a35a892e11201b49e063b0ddf475c1c9c}{k}}$<$ 1$\vert$$\vert$\mbox{\hyperlink{nnmf_8m_a35a892e11201b49e063b0ddf475c1c9c}{k}} $>$min(\mbox{\hyperlink{nnmf___jessica_8m_a376132b4f62ec2aeb6be80c0e506b27e}{m}}
+\item 
+\mbox{\hyperlink{nnmf_8m_a33ca08c6efe5dc93e4970dd8b6eb8c7f}{checkmatrices}} (a, w0, \mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}}, \mbox{\hyperlink{nnmf_8m_a35a892e11201b49e063b0ddf475c1c9c}{k}})
+\item 
+\mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_a5d1e6b0cf88185459e93757c69c928f1}{$\sim$isscalar}} (tries)$\vert$$\vert$$\sim$isnumeric(tries)$\vert$$\vert$tries$<$ 1$\vert$$\vert$tries$\sim$
+\item 
+Special \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} K is full rank we know the answer \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_a2f10ccbd5af32608cd1861c7ea1dbd29}{isempty}} (w0) \&\&isempty(\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}}) \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_a35a892e11201b49e063b0ddf475c1c9c}{k}}
+\item 
+Suppress undesired warnings \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_a334cf54cd589e0e8bb079c4d11c444a1}{use\+Pool}} On workers and client pct\+Run\+On\+All internal stats parallel \mbox{\hyperlink{nnmf_8m_ac2f13387feabcc95fdc6f7c871056e57}{mute\+Parallel\+Store}} (\textquotesingle{}rank\+Deficient\+Matrix\textquotesingle{},... \mbox{\hyperlink{nnmf_8m_aacb32e0bfb2e4cca0a51b786b646739c}{warning}}(\textquotesingle{}\mbox{\hyperlink{nnmf_8m_a835accca41274fb237599d9b3c117fcf}{off}}\textquotesingle{}, \textquotesingle{}MATLAB\+:rank\+Deficient\+Matrix\textquotesingle{}))
+\item 
+... \textquotesingle{}worker\+ID\textquotesingle{}, num2cell(1\+:poolsz \mbox{\hyperlink{nnmf_8m_a10b4083a38731e806336a6a518f482f7}{distribute\+To\+Pool}} ()
+\item 
+Periodic reports behave differently in parallel than they do in serial computation(which is the baseline). \% We advise the user of the difference. \mbox{\hyperlink{nnmf_8m_aacb32e0bfb2e4cca0a51b786b646739c}{warning}}(message(\textquotesingle{}stats Leave formatted by t UI strings untranslated \mbox{\hyperlink{nnmf_8m_ab50b9a5190ee257d13b325341761f35f}{fprintf}} (\textquotesingle{} worker\textbackslash{}t rep\textbackslash{}t iteration\textbackslash{}t rms resid\textbackslash{}t$\vert$\mbox{\hyperlink{nnmf_8m_a66db7c5e4e9699c54207ab857ae72cb7}{delta}} \mbox{\hyperlink{nnmf_8m_aa010110f98c319fdcf8693409a4c7bca}{x}}$\vert$\textbackslash{}n\textquotesingle{})
+\item 
+else \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} use\+Parallel \mbox{\hyperlink{nnmf_8m_aacb32e0bfb2e4cca0a51b786b646739c}{warning}} (message(\textquotesingle{}stats\+:nnmf\+:display\+Parallel\textquotesingle{}))
+\item 
+end \mbox{\hyperlink{nnmf_8m_a939975a3809a3dbba4c70b795f07916a}{fprintf}} (\textquotesingle{} rep\textbackslash{}t iteration\textbackslash{}t rms resid\textbackslash{}t$\vert$\mbox{\hyperlink{nnmf_8m_a66db7c5e4e9699c54207ab857ae72cb7}{delta}} \mbox{\hyperlink{nnmf_8m_aa010110f98c319fdcf8693409a4c7bca}{x}}$\vert$\textbackslash{}n\textquotesingle{})
+\item 
+catch ME Revert warning setting for rank\+Deficient\+Matrix to value prior to \mbox{\hyperlink{classnnmf}{nnmf}} \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_a334cf54cd589e0e8bb079c4d11c444a1}{use\+Pool}} On workers and \mbox{\hyperlink{nnmf_8m_a58ab1fd68e97078232808206b850161b}{on}} client pct\+Run\+On\+All \mbox{\hyperlink{nnmf_8m_a9587941b8675242573eb07ccfb44d87c}{warning}} (internal.\+stats.\+parallel.\+stat\+Parallel\+Store(\textquotesingle{}rank\+Deficient\+Matrix\textquotesingle{}).state, \textquotesingle{}MATLAB\+:rank\+Deficient\+Matrix\textquotesingle{})
+\item 
+else On client \mbox{\hyperlink{nnmf_8m_ab42d751f6008eb2ea7fa87fa8da60b24}{warning}} (\mbox{\hyperlink{nnmf_8m_a2b12d4efe07a63e789d89566d94ae700}{ws}})
+\item 
+end \mbox{\hyperlink{nnmf_8m_a0058e1d356064ccd1ba67e9fe41a7e0a}{rethrow}} (ME)
+\item 
+\textquotesingle{}\%s\textbackslash{}n\textquotesingle{}, get\+String(message(\textquotesingle{}stats\+:nnmf\+:\+Final\+RMSResidual\textquotesingle{}, sprintf(\textquotesingle{}\%g\textquotesingle{}, \mbox{\hyperlink{nnmf_8m_a77363e7cb0166a2530030b65b2849f1b}{normbest}} \mbox{\hyperlink{nnmf_8m_a3150350063a7c3659c4d9ff6a02e0c7c}{fprintf}} ()
+\item 
+\mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} any(hlen==0) \mbox{\hyperlink{nnmf_8m_aacb32e0bfb2e4cca0a51b786b646739c}{warning}}(message(\textquotesingle{}stats \mbox{\hyperlink{nnmf_8m_a6c6d7cee0465db626dfd8121c0503f26}{hlen}} (hlen==0)
+\item 
+S \mbox{\hyperlink{nnmf_8m_af3d3e57fa849e127bd2eb7b1415c8629}{get\+Global\+Stream}} ()
+\item 
+end \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} ($\sim$\mbox{\hyperlink{nnmf_8m_a2f10ccbd5af32608cd1861c7ea1dbd29}{isempty}}(\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}}) \&\&iter==1) \mbox{\hyperlink{nnmf_8m_a9788ce2dbc4cfc0b05332d27d78089df}{whtry}}
+\item 
+a \mbox{\hyperlink{nnmf_8m_ab1ae3dfa90cc21cb2c639ff660f8ae07}{numel}} ()
+\item 
+Check for convergence \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_a5f1e516005b0dfe6e3e764fee1efb413}{j}} \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_a66db7c5e4e9699c54207ab857ae72cb7}{delta}}$<$=\mbox{\hyperlink{nnmf_8m_aa82cfb9e59d529e0e4ac76ab846cc46d}{tolx}} break;elseif dnorm0-\/\mbox{\hyperlink{nnmf_8m_a2365e4dbcd9c879d59c0c07baa50bf02}{dnorm}}$<$=\mbox{\hyperlink{nnmf_8m_abb7efdac5083cc82dff8d669d5a9bd94}{tolfun}} $\ast$max(1, dnorm0) break;elseif \mbox{\hyperlink{nnmf_8m_a5f1e516005b0dfe6e3e764fee1efb413}{j}}==\mbox{\hyperlink{nnmf_8m_a46bb007d223fe0b24732e6c9a65175b3}{maxiter}} break end end \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_afbc3681eda88f3216c7263e31b69a052}{dispnum}} $>$2 \% \textquotesingle{}iter\textquotesingle{} \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_a334cf54cd589e0e8bb079c4d11c444a1}{use\+Pool}} fprintf(\mbox{\hyperlink{nnmf_8m_a0eb7bf8b8a9c2ca743c14e5b71e6867a}{dispfmt}}, \mbox{\hyperlink{nnmf_8m_abedc42a712458600524379cd7748f8af}{labindx}}, repnum, \mbox{\hyperlink{nnmf_8m_a5f1e516005b0dfe6e3e764fee1efb413}{j}}, \mbox{\hyperlink{nnmf_8m_a2365e4dbcd9c879d59c0c07baa50bf02}{dnorm}}, \mbox{\hyperlink{nnmf_8m_a66db7c5e4e9699c54207ab857ae72cb7}{delta}});else fprintf(\mbox{\hyperlink{nnmf_8m_a0eb7bf8b8a9c2ca743c14e5b71e6867a}{dispfmt}}, repnum, \mbox{\hyperlink{nnmf_8m_a5f1e516005b0dfe6e3e764fee1efb413}{j}}, \mbox{\hyperlink{nnmf_8m_a2365e4dbcd9c879d59c0c07baa50bf02}{dnorm}}, \mbox{\hyperlink{nnmf_8m_a66db7c5e4e9699c54207ab857ae72cb7}{delta}});end end \% Remember previous \mbox{\hyperlink{nnmf___jessica_8m_a97f9c2753f848b831c6c8f7ba42f5339}{iteration}} results dnorm0=\mbox{\hyperlink{nnmf_8m_a2365e4dbcd9c879d59c0c07baa50bf02}{dnorm}};w0=\mbox{\hyperlink{nnmf_8m_a572953ea011800ee6ea385fc04bd6a15}{w}};\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}}=\mbox{\hyperlink{nnmf_8m_aeaa46e7726a6a7e4a0a3c900767e1d9c}{h}};endif \mbox{\hyperlink{nnmf_8m_afbc3681eda88f3216c7263e31b69a052}{dispnum}} $>$ final or iter \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_a334cf54cd589e0e8bb079c4d11c444a1}{use\+Pool}} \mbox{\hyperlink{nnmf_8m_a8fd0ba09d8a29f61858f634f9072daec}{fprintf}} (\mbox{\hyperlink{nnmf_8m_a0eb7bf8b8a9c2ca743c14e5b71e6867a}{dispfmt}}, \mbox{\hyperlink{nnmf_8m_abedc42a712458600524379cd7748f8af}{labindx}}, repnum, \mbox{\hyperlink{nnmf_8m_a5f1e516005b0dfe6e3e764fee1efb413}{j}}, \mbox{\hyperlink{nnmf_8m_a2365e4dbcd9c879d59c0c07baa50bf02}{dnorm}}, \mbox{\hyperlink{nnmf_8m_a66db7c5e4e9699c54207ab857ae72cb7}{delta}})
+\item 
+else \mbox{\hyperlink{nnmf_8m_ac2f90266e826905d8dbef9693ef2261e}{fprintf}} (\mbox{\hyperlink{nnmf_8m_a0eb7bf8b8a9c2ca743c14e5b71e6867a}{dispfmt}}, repnum, \mbox{\hyperlink{nnmf_8m_a5f1e516005b0dfe6e3e764fee1efb413}{j}}, \mbox{\hyperlink{nnmf_8m_a2365e4dbcd9c879d59c0c07baa50bf02}{dnorm}}, \mbox{\hyperlink{nnmf_8m_a66db7c5e4e9699c54207ab857ae72cb7}{delta}})
+\item 
+a \mbox{\hyperlink{nnmf_8m_a5144f11414a742574b0b4aeb7fd3f7f6}{size}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{nnmf_8m_afc87b3624b681db9885f5cc532a3cb9f}{function}} \mbox{[}\mbox{\hyperlink{nnmf_8m_a2ec5bea17d4c018fb91145a85fbb3052}{wbest}}, \mbox{\hyperlink{nnmf_8m_a0b99c133ce7291aaa8bd9bd4d17ec994}{hbest}}, \mbox{\hyperlink{nnmf_8m_a77363e7cb0166a2530030b65b2849f1b}{normbest}}\mbox{]}
+\item 
+\mbox{\hyperlink{nnmf_8m_a5d9dd41a50edb71e9d63c67852759eb0}{h\+Lines}} = gscatter(\mbox{\hyperlink{nnmf_8m_a572953ea011800ee6ea385fc04bd6a15}{w}}(\+:,1),\mbox{\hyperlink{nnmf_8m_a572953ea011800ee6ea385fc04bd6a15}{w}}(\+:,2),species)
+\item 
+hold \mbox{\hyperlink{nnmf_8m_a58ab1fd68e97078232808206b850161b}{on}}
+\item 
+hold \mbox{\hyperlink{nnmf_8m_a835accca41274fb237599d9b3c117fcf}{off}}
+\item 
+\mbox{\hyperlink{nnmf_8m_a95ab9b93bf03aa54f98c7a5e28e526ff}{opt}} = statset(\textquotesingle{}\mbox{\hyperlink{nnmf_8m_a46bb007d223fe0b24732e6c9a65175b3}{maxiter}}\textquotesingle{},5,\textquotesingle{}display\textquotesingle{},\textquotesingle{}final\textquotesingle{})
+\item 
+See also \mbox{\hyperlink{nnmf_8m_ab4a39f23da578f9b1b457eab1e7c7c25}{BIPLOT}} = \mbox{\hyperlink{classnnmf}{nnmf}}(\mbox{\hyperlink{nnmf_8m_aa010110f98c319fdcf8693409a4c7bca}{x}},5,\textquotesingle{}w0\textquotesingle{},\mbox{\hyperlink{nnmf_8m_a572953ea011800ee6ea385fc04bd6a15}{w}},\textquotesingle{}\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}}\textquotesingle{},\mbox{\hyperlink{nnmf_8m_aeaa46e7726a6a7e4a0a3c900767e1d9c}{h}},\textquotesingle{}\mbox{\hyperlink{nnmf_8m_a95ab9b93bf03aa54f98c7a5e28e526ff}{opt}}\textquotesingle{},\mbox{\hyperlink{nnmf_8m_a95ab9b93bf03aa54f98c7a5e28e526ff}{opt}},\textquotesingle{}\mbox{\hyperlink{nnmf_8m_a3a76cbb6e504bf475810f39404bbf3d0}{alg}}\textquotesingle{},\textquotesingle{}als\textquotesingle{})
+\item 
+See also \mbox{\hyperlink{nnmf_8m_a1bf7c90d3cd6a93f116a908ddfcd7c66}{PCA}}
+\item 
+See also \mbox{\hyperlink{nnmf_8m_a079514cb1e280db72de566b2eafe2c72}{STATSET}}
+\item 
+\mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} n \mbox{\hyperlink{nnmf_8m_a35a892e11201b49e063b0ddf475c1c9c}{k}}
+\item 
+end Process optional arguments \mbox{\hyperlink{nnmf_8m_adef86b11d518828ef272f58a653482ef}{pnames}} = \{\textquotesingle{}algorithm\textquotesingle{} \textquotesingle{}w0\textquotesingle{} \textquotesingle{}\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}}\textquotesingle{} \textquotesingle{}replicates\textquotesingle{} \textquotesingle{}options\textquotesingle{}\}
+\item 
+\mbox{\hyperlink{nnmf_8m_a2916255af6ab4618ac4e382d6cbfcdb3}{dflts}} = \{\textquotesingle{}als\textquotesingle{} \mbox{[}$\,$\mbox{]} \mbox{[}$\,$\mbox{]} 1 \mbox{[}$\,$\mbox{]} \}
+\item 
+Check optional arguments \mbox{\hyperlink{nnmf_8m_a3a76cbb6e504bf475810f39404bbf3d0}{alg}} = internal.\+stats.\+get\+Param\+Val(alg,\{\textquotesingle{}mult\textquotesingle{} \textquotesingle{}als\textquotesingle{}\},\textquotesingle{}ALGORITHM\textquotesingle{})
+\item 
+\mbox{\hyperlink{nnmf_8m_a80e8255e431350121275c03c1b97c94a}{ismult}} = strncmp(\textquotesingle{}mult\textquotesingle{},\mbox{\hyperlink{nnmf_8m_a3a76cbb6e504bf475810f39404bbf3d0}{alg}},\mbox{\hyperlink{nnmf_8m_ab1ae3dfa90cc21cb2c639ff660f8ae07}{numel}}(\mbox{\hyperlink{nnmf_8m_a3a76cbb6e504bf475810f39404bbf3d0}{alg}}))
+\item 
+end \mbox{\hyperlink{nnmf_8m_a96484a0355b5397f8d3fc5e844e7346e}{defaultopt}} = statset(\textquotesingle{}\mbox{\hyperlink{classnnmf}{nnmf}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{nnmf_8m_aa82cfb9e59d529e0e4ac76ab846cc46d}{tolx}} = statget(options,\textquotesingle{}TolX\textquotesingle{},\mbox{\hyperlink{nnmf_8m_a96484a0355b5397f8d3fc5e844e7346e}{defaultopt}},\textquotesingle{}fast\textquotesingle{})
+\item 
+\mbox{\hyperlink{nnmf_8m_abb7efdac5083cc82dff8d669d5a9bd94}{tolfun}} = statget(options,\textquotesingle{}Tol\+Fun\textquotesingle{},\mbox{\hyperlink{nnmf_8m_a96484a0355b5397f8d3fc5e844e7346e}{defaultopt}},\textquotesingle{}fast\textquotesingle{})
+\item 
+\mbox{\hyperlink{nnmf_8m_a46bb007d223fe0b24732e6c9a65175b3}{maxiter}} = statget(options,\textquotesingle{}Max\+Iter\textquotesingle{},\mbox{\hyperlink{nnmf_8m_a96484a0355b5397f8d3fc5e844e7346e}{defaultopt}},\textquotesingle{}fast\textquotesingle{})
+\item 
+\mbox{\hyperlink{nnmf_8m_a6f3cd405f68142c7dd1a85d76150540f}{dispopt}} = statget(options,\textquotesingle{}Display\textquotesingle{},\mbox{\hyperlink{nnmf_8m_a96484a0355b5397f8d3fc5e844e7346e}{defaultopt}},\textquotesingle{}fast\textquotesingle{})
+\item 
+\mbox{\hyperlink{nnmf_8m_afbc3681eda88f3216c7263e31b69a052}{dispnum}} = dispnum -\/ 1
+\item 
+\mbox{\hyperlink{nnmf_8m_a334cf54cd589e0e8bb079c4d11c444a1}{use\+Pool}} = use\+Parallel \&\& poolsz$>$0
+\item 
+Special \mbox{\hyperlink{nnmf_8m_a387fd63a2085b150ab79938dd4863b6a}{case}}
+\item 
+\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}} = eye(\mbox{\hyperlink{nnmf_8m_a35a892e11201b49e063b0ddf475c1c9c}{k}})
+\item 
+end end Define the \mbox{\hyperlink{nnmf_8m_afc87b3624b681db9885f5cc532a3cb9f}{function}} that will perform one \mbox{\hyperlink{nnmf___jessica_8m_a97f9c2753f848b831c6c8f7ba42f5339}{iteration}} of the loop inside smart\+For \mbox{\hyperlink{nnmf_8m_a209e990864a6b83621dc40aa260a7ca2}{loopbody}} = @loop\+Body
+\item 
+else On client \mbox{\hyperlink{nnmf_8m_a2b12d4efe07a63e789d89566d94ae700}{ws}} = \mbox{\hyperlink{nnmf_8m_aacb32e0bfb2e4cca0a51b786b646739c}{warning}}(\textquotesingle{}\mbox{\hyperlink{nnmf_8m_a835accca41274fb237599d9b3c117fcf}{off}}\textquotesingle{},\textquotesingle{}MATLAB\+:rank\+Deficient\+Matrix\textquotesingle{})
+\item 
+end end try \mbox{\hyperlink{nnmf_8m_aa82a4be85bb658ceab89a63864c0127f}{whbest}}
+\item 
+end \mbox{\hyperlink{nnmf_8m_a77363e7cb0166a2530030b65b2849f1b}{normbest}} = \mbox{\hyperlink{nnmf_8m_aa82a4be85bb658ceab89a63864c0127f}{whbest}}\{1\}
+\item 
+\mbox{\hyperlink{nnmf_8m_a2ec5bea17d4c018fb91145a85fbb3052}{wbest}} = \mbox{\hyperlink{nnmf_8m_aa82a4be85bb658ceab89a63864c0127f}{whbest}}\{3\}
+\item 
+\mbox{\hyperlink{nnmf_8m_a0b99c133ce7291aaa8bd9bd4d17ec994}{hbest}} = \mbox{\hyperlink{nnmf_8m_aa82a4be85bb658ceab89a63864c0127f}{whbest}}\{4\}
+\item 
+Then order by \mbox{\hyperlink{nnmf_8m_a572953ea011800ee6ea385fc04bd6a15}{w}} \mbox{[}$\sim$, idx\mbox{]} = sort(sum(wbest.$^\wedge$2,1),\textquotesingle{}descend\textquotesingle{})
+\item 
+end whtry is a temporary variable and hence needs to be reinitialized at start of each loop \mbox{\hyperlink{nnmf_8m_a9788ce2dbc4cfc0b05332d27d78089df}{whtry}} = cell(4,1)
+\item 
+end Perform a \mbox{\hyperlink{nnmf_8m_a9f9d5c65e8649bc202b6997c7f9d41af}{factorization}} \mbox{[}\mbox{\hyperlink{nnmf_8m_a9788ce2dbc4cfc0b05332d27d78089df}{whtry}}\{3\}, \mbox{\hyperlink{nnmf_8m_a9788ce2dbc4cfc0b05332d27d78089df}{whtry}}\{4\}, \mbox{\hyperlink{nnmf_8m_a9788ce2dbc4cfc0b05332d27d78089df}{whtry}}\{1\}\mbox{]}
+\item 
+\mbox{\hyperlink{nnmf_8m_a848b570d14780b528244c5f7161feda9}{cellout}} = \mbox{\hyperlink{nnmf_8m_a9788ce2dbc4cfc0b05332d27d78089df}{whtry}}
+\item 
+\mbox{\hyperlink{nnmf_8m_a4fe840ad672382f0d765d2932ad1598d}{sqrteps}} = sqrt(eps)
+\item 
+Display progress For parallel \mbox{\hyperlink{nnmf_8m_a1daf73218cd6c9ad208e1948485f2215}{computing}}
+\item 
+Display progress For parallel the replicate number will be displayed under the worker performing the replicate \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_afbc3681eda88f3216c7263e31b69a052}{dispnum}} final or iter \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_a334cf54cd589e0e8bb079c4d11c444a1}{use\+Pool}} \mbox{\hyperlink{nnmf_8m_abedc42a712458600524379cd7748f8af}{labindx}} = internal.\+stats.\+parallel.\+worker\+Get\+Value(\textquotesingle{}worker\+ID\textquotesingle{})
+\item 
+\mbox{\hyperlink{nnmf_8m_a0eb7bf8b8a9c2ca743c14e5b71e6867a}{dispfmt}} = \textquotesingle{}\%8d\textbackslash{}t\%8d\textbackslash{}t\%8d\textbackslash{}t\%14g\textbackslash{}t\%14g\textbackslash{}n\textquotesingle{}
+\item 
+end end for \mbox{\hyperlink{nnmf_8m_a5f1e516005b0dfe6e3e764fee1efb413}{j}}
+\item 
+\mbox{\hyperlink{nnmf_8m_aeaa46e7726a6a7e4a0a3c900767e1d9c}{h}} = max(0,\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}} .$\ast$ (\mbox{\hyperlink{nnmf_8m_aba586fac0864d45085934cdd0b475c6f}{numer}} ./ ((w0\textquotesingle{}$\ast$w0)$\ast$\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}} + eps(\mbox{\hyperlink{nnmf_8m_aba586fac0864d45085934cdd0b475c6f}{numer}}))))
+\item 
+\mbox{\hyperlink{nnmf_8m_aba586fac0864d45085934cdd0b475c6f}{numer}} = a$\ast$\mbox{\hyperlink{nnmf_8m_aeaa46e7726a6a7e4a0a3c900767e1d9c}{h}}\textquotesingle{}
+\item 
+end Get norm of difference and max change in factors \mbox{\hyperlink{nnmf_8m_ad78f871af211e472eea827e9cb72aeb2}{d}} = a -\/ \mbox{\hyperlink{nnmf_8m_a572953ea011800ee6ea385fc04bd6a15}{w}}$\ast$\mbox{\hyperlink{nnmf_8m_aeaa46e7726a6a7e4a0a3c900767e1d9c}{h}}
+\item 
+\mbox{\hyperlink{nnmf_8m_a2365e4dbcd9c879d59c0c07baa50bf02}{dnorm}} = sqrt(sum(sum(d.$^\wedge$2))/nm)
+\item 
+\mbox{\hyperlink{nnmf_8m_a0ed3b2d31e94aed73be91c6b7ca626ef}{dw}} = max(max(abs(\mbox{\hyperlink{nnmf_8m_a572953ea011800ee6ea385fc04bd6a15}{w}}-\/w0) / (\mbox{\hyperlink{nnmf_8m_a4fe840ad672382f0d765d2932ad1598d}{sqrteps}}+max(max(abs(w0))))))
+\item 
+\mbox{\hyperlink{nnmf_8m_adde87296d4bfd7289a799bbffa413d91}{dh}} = max(max(abs(\mbox{\hyperlink{nnmf_8m_aeaa46e7726a6a7e4a0a3c900767e1d9c}{h}}-\/\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}}) / (\mbox{\hyperlink{nnmf_8m_a4fe840ad672382f0d765d2932ad1598d}{sqrteps}}+max(max(abs(\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}}))))))
+\item 
+\mbox{\hyperlink{nnmf_8m_a66db7c5e4e9699c54207ab857ae72cb7}{delta}} = max(\mbox{\hyperlink{nnmf_8m_a0ed3b2d31e94aed73be91c6b7ca626ef}{dw}},\mbox{\hyperlink{nnmf_8m_adde87296d4bfd7289a799bbffa413d91}{dh}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{nnmf_8m_aa010110f98c319fdcf8693409a4c7bca}\label{nnmf_8m_aa010110f98c319fdcf8693409a4c7bca}} 
+\index{nnmf.m@{nnmf.m}!x@{x}}
+\index{x@{x}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{nnmf_8m_aa010110f98c319fdcf8693409a4c7bca}{x}} =  rand(100,20)$\ast$rand(20,50)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{nnmf_8m_a963bf4ec8b0ce3c752408afd200a9606}\label{nnmf_8m_a963bf4ec8b0ce3c752408afd200a9606}} 
+\index{nnmf.m@{nnmf.m}!axis@{axis}}
+\index{axis@{axis}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{axis()}{axis()}}
+{\footnotesize\ttfamily axis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf_8m_aca2f6784d0d79b1b68c1d1d2be0baa23}\label{nnmf_8m_aca2f6784d0d79b1b68c1d1d2be0baa23}} 
+\index{nnmf.m@{nnmf.m}!biplot@{biplot}}
+\index{biplot@{biplot}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{biplot()}{biplot()}}
+{\footnotesize\ttfamily biplot (\begin{DoxyParamCaption}\item[{max(\mbox{\hyperlink{nnmf_8m_a572953ea011800ee6ea385fc04bd6a15}{w}}(\+:)) $\ast$\mbox{\hyperlink{nnmf_8m_aeaa46e7726a6a7e4a0a3c900767e1d9c}{h}}\textquotesingle{}}]{,  }\item[{\textquotesingle{}Var\+Labels\textquotesingle{}}]{,  }\item[{\{ \textquotesingle{}sl\textquotesingle{} \textquotesingle{}sw\textquotesingle{} \textquotesingle{}pl\textquotesingle{} \textquotesingle{}pw\textquotesingle{}\}}]{,  }\item[{\textquotesingle{}positive\textquotesingle{}}]{,  }\item[{true}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf_8m_a33ca08c6efe5dc93e4970dd8b6eb8c7f}\label{nnmf_8m_a33ca08c6efe5dc93e4970dd8b6eb8c7f}} 
+\index{nnmf.m@{nnmf.m}!checkmatrices@{checkmatrices}}
+\index{checkmatrices@{checkmatrices}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{checkmatrices()}{checkmatrices()}}
+{\footnotesize\ttfamily checkmatrices (\begin{DoxyParamCaption}\item[{a}]{,  }\item[{w0}]{,  }\item[{\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}}}]{,  }\item[{\mbox{\hyperlink{nnmf_8m_a35a892e11201b49e063b0ddf475c1c9c}{k}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf_8m_a10b4083a38731e806336a6a518f482f7}\label{nnmf_8m_a10b4083a38731e806336a6a518f482f7}} 
+\index{nnmf.m@{nnmf.m}!distributeToPool@{distributeToPool}}
+\index{distributeToPool@{distributeToPool}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{distributeToPool()}{distributeToPool()}}
+{\footnotesize\ttfamily ... \textquotesingle{}worker\+ID\textquotesingle{}, num2cell(1\+:poolsz distribute\+To\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{nnmf_8m_a939975a3809a3dbba4c70b795f07916a}\label{nnmf_8m_a939975a3809a3dbba4c70b795f07916a}} 
+\index{nnmf.m@{nnmf.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily end fprintf (\begin{DoxyParamCaption}\item[{\textquotesingle{} rep\textbackslash{}t iteration\textbackslash{}t rms resid\textbackslash{}t$\vert$\mbox{\hyperlink{nnmf_8m_a66db7c5e4e9699c54207ab857ae72cb7}{delta}} \mbox{\hyperlink{nnmf_8m_aa010110f98c319fdcf8693409a4c7bca}{x}}$\vert$\textbackslash{}n\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf_8m_ab50b9a5190ee257d13b325341761f35f}\label{nnmf_8m_ab50b9a5190ee257d13b325341761f35f}} 
+\index{nnmf.m@{nnmf.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily Periodic reports behave differently in parallel than they do in serial computation(which is the baseline). \% We advise the user of the difference. \mbox{\hyperlink{nnmf_8m_aacb32e0bfb2e4cca0a51b786b646739c}{warning}}(message( \textquotesingle{}stats Leave formatted by t UI strings untranslated fprintf (\begin{DoxyParamCaption}\item[{\textquotesingle{} worker\textbackslash{}t rep\textbackslash{}t iteration\textbackslash{}t rms resid\textbackslash{}t$\vert$\mbox{\hyperlink{nnmf_8m_a66db7c5e4e9699c54207ab857ae72cb7}{delta}} \mbox{\hyperlink{nnmf_8m_aa010110f98c319fdcf8693409a4c7bca}{x}}$\vert$\textbackslash{}n\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf_8m_a3150350063a7c3659c4d9ff6a02e0c7c}\label{nnmf_8m_a3150350063a7c3659c4d9ff6a02e0c7c}} 
+\index{nnmf.m@{nnmf.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \textquotesingle{}\%s\textbackslash{}n\textquotesingle{}, get\+String(message( \textquotesingle{}stats\+:nnmf\+:\+Final\+RMSResidual\textquotesingle{}, sprintf(\textquotesingle{}\%g\textquotesingle{}, \mbox{\hyperlink{nnmf_8m_a77363e7cb0166a2530030b65b2849f1b}{normbest}} fprintf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{nnmf_8m_a8fd0ba09d8a29f61858f634f9072daec}\label{nnmf_8m_a8fd0ba09d8a29f61858f634f9072daec}} 
+\index{nnmf.m@{nnmf.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Check for convergence \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_a5f1e516005b0dfe6e3e764fee1efb413}{j}} \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_a66db7c5e4e9699c54207ab857ae72cb7}{delta}}$<$=\mbox{\hyperlink{nnmf_8m_aa82cfb9e59d529e0e4ac76ab846cc46d}{tolx}} break; elseif dnorm0-\/\mbox{\hyperlink{nnmf_8m_a2365e4dbcd9c879d59c0c07baa50bf02}{dnorm}}$<$=\mbox{\hyperlink{nnmf_8m_abb7efdac5083cc82dff8d669d5a9bd94}{tolfun}} $\ast$max(1, dnorm0) break; elseif \mbox{\hyperlink{nnmf_8m_a5f1e516005b0dfe6e3e764fee1efb413}{j}}==\mbox{\hyperlink{nnmf_8m_a46bb007d223fe0b24732e6c9a65175b3}{maxiter}} break end end \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_afbc3681eda88f3216c7263e31b69a052}{dispnum}} $>$2 \% \textquotesingle{}iter\textquotesingle{} \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_a334cf54cd589e0e8bb079c4d11c444a1}{use\+Pool}} fprintf(\mbox{\hyperlink{nnmf_8m_a0eb7bf8b8a9c2ca743c14e5b71e6867a}{dispfmt}}, \mbox{\hyperlink{nnmf_8m_abedc42a712458600524379cd7748f8af}{labindx}}, repnum, \mbox{\hyperlink{nnmf_8m_a5f1e516005b0dfe6e3e764fee1efb413}{j}}, \mbox{\hyperlink{nnmf_8m_a2365e4dbcd9c879d59c0c07baa50bf02}{dnorm}}, \mbox{\hyperlink{nnmf_8m_a66db7c5e4e9699c54207ab857ae72cb7}{delta}}); else fprintf(\mbox{\hyperlink{nnmf_8m_a0eb7bf8b8a9c2ca743c14e5b71e6867a}{dispfmt}}, repnum, \mbox{\hyperlink{nnmf_8m_a5f1e516005b0dfe6e3e764fee1efb413}{j}}, \mbox{\hyperlink{nnmf_8m_a2365e4dbcd9c879d59c0c07baa50bf02}{dnorm}}, \mbox{\hyperlink{nnmf_8m_a66db7c5e4e9699c54207ab857ae72cb7}{delta}}); end end \% Remember previous \mbox{\hyperlink{nnmf___jessica_8m_a97f9c2753f848b831c6c8f7ba42f5339}{iteration}} results dnorm0=\mbox{\hyperlink{nnmf_8m_a2365e4dbcd9c879d59c0c07baa50bf02}{dnorm}}; w0=\mbox{\hyperlink{nnmf_8m_a572953ea011800ee6ea385fc04bd6a15}{w}}; \mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}}=\mbox{\hyperlink{nnmf_8m_aeaa46e7726a6a7e4a0a3c900767e1d9c}{h}};endif \mbox{\hyperlink{nnmf_8m_afbc3681eda88f3216c7263e31b69a052}{dispnum}} $>$ final or iter \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_a334cf54cd589e0e8bb079c4d11c444a1}{use\+Pool}} fprintf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{nnmf_8m_a0eb7bf8b8a9c2ca743c14e5b71e6867a}{dispfmt}}}]{,  }\item[{\mbox{\hyperlink{nnmf_8m_abedc42a712458600524379cd7748f8af}{labindx}}}]{,  }\item[{repnum}]{,  }\item[{\mbox{\hyperlink{nnmf_8m_a5f1e516005b0dfe6e3e764fee1efb413}{j}}}]{,  }\item[{\mbox{\hyperlink{nnmf_8m_a2365e4dbcd9c879d59c0c07baa50bf02}{dnorm}}}]{,  }\item[{\mbox{\hyperlink{nnmf_8m_a66db7c5e4e9699c54207ab857ae72cb7}{delta}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf_8m_ac2f90266e826905d8dbef9693ef2261e}\label{nnmf_8m_ac2f90266e826905d8dbef9693ef2261e}} 
+\index{nnmf.m@{nnmf.m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{fprintf()}{fprintf()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily else fprintf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{nnmf_8m_a0eb7bf8b8a9c2ca743c14e5b71e6867a}{dispfmt}}}]{,  }\item[{repnum}]{,  }\item[{\mbox{\hyperlink{nnmf_8m_a5f1e516005b0dfe6e3e764fee1efb413}{j}}}]{,  }\item[{\mbox{\hyperlink{nnmf_8m_a2365e4dbcd9c879d59c0c07baa50bf02}{dnorm}}}]{,  }\item[{\mbox{\hyperlink{nnmf_8m_a66db7c5e4e9699c54207ab857ae72cb7}{delta}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf_8m_af3d3e57fa849e127bd2eb7b1415c8629}\label{nnmf_8m_af3d3e57fa849e127bd2eb7b1415c8629}} 
+\index{nnmf.m@{nnmf.m}!getGlobalStream@{getGlobalStream}}
+\index{getGlobalStream@{getGlobalStream}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{getGlobalStream()}{getGlobalStream()}}
+{\footnotesize\ttfamily S get\+Global\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{nnmf_8m_a6c6d7cee0465db626dfd8121c0503f26}\label{nnmf_8m_a6c6d7cee0465db626dfd8121c0503f26}} 
+\index{nnmf.m@{nnmf.m}!hlen@{hlen}}
+\index{hlen@{hlen}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{hlen()}{hlen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} any(hlen==0) \mbox{\hyperlink{nnmf_8m_aacb32e0bfb2e4cca0a51b786b646739c}{warning}}(message( \textquotesingle{}stats hlen (\begin{DoxyParamCaption}\item[{hlen}]{ = {\ttfamily =0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}\label{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}} 
+\index{nnmf.m@{nnmf.m}!if@{if}}
+\index{if@{if}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}}
+{\footnotesize\ttfamily end if (\begin{DoxyParamCaption}\item[{$\sim$\mbox{\hyperlink{nnmf_8m_a2f10ccbd5af32608cd1861c7ea1dbd29}{isempty}}(\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}}) \&\&}]{iter = {\ttfamily =1} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf_8m_a2f10ccbd5af32608cd1861c7ea1dbd29}\label{nnmf_8m_a2f10ccbd5af32608cd1861c7ea1dbd29}} 
+\index{nnmf.m@{nnmf.m}!isempty@{isempty}}
+\index{isempty@{isempty}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{isempty()}{isempty()}}
+{\footnotesize\ttfamily Special \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} K is full rank we know the answer \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} isempty (\begin{DoxyParamCaption}\item[{w0}]{ }\end{DoxyParamCaption}) \&\&}
+
+\mbox{\Hypertarget{nnmf_8m_a2f64f158fe8691bf7449340ccf093fde}\label{nnmf_8m_a2f64f158fe8691bf7449340ccf093fde}} 
+\index{nnmf.m@{nnmf.m}!legend@{legend}}
+\index{legend@{legend}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{legend()}{legend()}}
+{\footnotesize\ttfamily legend (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{nnmf_8m_a5d9dd41a50edb71e9d63c67852759eb0}{h\+Lines}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf_8m_ac2f13387feabcc95fdc6f7c871056e57}\label{nnmf_8m_ac2f13387feabcc95fdc6f7c871056e57}} 
+\index{nnmf.m@{nnmf.m}!muteParallelStore@{muteParallelStore}}
+\index{muteParallelStore@{muteParallelStore}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{muteParallelStore()}{muteParallelStore()}}
+{\footnotesize\ttfamily Suppress undesired warnings \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_a334cf54cd589e0e8bb079c4d11c444a1}{use\+Pool}} On workers and client pct\+Run\+On\+All internal stats parallel mute\+Parallel\+Store (\begin{DoxyParamCaption}\item[{\textquotesingle{}rank\+Deficient\+Matrix\textquotesingle{}}]{,  }\item[{... }]{warning \textquotesingle{}off\textquotesingle{}, \textquotesingle{}\+MATLAB\+:rank\+Deficient\+Matrix\textquotesingle{} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf_8m_aac9ae037154a656732db2f665f6c5bcf}\label{nnmf_8m_aac9ae037154a656732db2f665f6c5bcf}} 
+\index{nnmf.m@{nnmf.m}!narginchk@{narginchk}}
+\index{narginchk@{narginchk}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{narginchk()}{narginchk()}}
+{\footnotesize\ttfamily end narginchk (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{Inf}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf_8m_ab1ae3dfa90cc21cb2c639ff660f8ae07}\label{nnmf_8m_ab1ae3dfa90cc21cb2c639ff660f8ae07}} 
+\index{nnmf.m@{nnmf.m}!numel@{numel}}
+\index{numel@{numel}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{numel()}{numel()}}
+{\footnotesize\ttfamily a numel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{nnmf_8m_af5f51f15b527fc9341d424c0d6055b22}\label{nnmf_8m_af5f51f15b527fc9341d424c0d6055b22}} 
+\index{nnmf.m@{nnmf.m}!pairs:fields:NOTE:Examples:@{pairs:fields:NOTE:Examples:}}
+\index{pairs:fields:NOTE:Examples:@{pairs:fields:NOTE:Examples:}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{pairs:fields:NOTE:Examples:()}{pairs:fields:NOTE:Examples:()}}
+{\footnotesize\ttfamily A, K, \textquotesingle{}PARAM1\textquotesingle{}, val1, \textquotesingle{}PARAM2\textquotesingle{}, val2,... pairs\+:fields\+:\+NOTE\+:\+Examples\+: (\begin{DoxyParamCaption}\item[{default 1}]{following,  }\item[{\mbox{[}fields\mbox{]} the default}]{PARALLELSTATS,  }\item[{\mbox{[}\+NOTE\mbox{]} depending \mbox{\hyperlink{nnmf_8m_a58ab1fd68e97078232808206b850161b}{on}} your installation and preferences}]{TRUE,  }\item[{\mbox{[}\+Examples\mbox{]} meas}]{,  }\item[{2}]{nnmf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{nnmf_8m_af83bf6cd0d8bf84c1d426452eee4e2c7}\label{nnmf_8m_af83bf6cd0d8bf84c1d426452eee4e2c7}} 
+\index{nnmf.m@{nnmf.m}!Reference:@{Reference:}}
+\index{Reference:@{Reference:}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{Reference:()}{Reference:()}}
+{\footnotesize\ttfamily id Reference\+: (\begin{DoxyParamCaption}\item[{2007}]{varargin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{nnmf_8m_a0058e1d356064ccd1ba67e9fe41a7e0a}\label{nnmf_8m_a0058e1d356064ccd1ba67e9fe41a7e0a}} 
+\index{nnmf.m@{nnmf.m}!rethrow@{rethrow}}
+\index{rethrow@{rethrow}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{rethrow()}{rethrow()}}
+{\footnotesize\ttfamily end rethrow (\begin{DoxyParamCaption}\item[{ME}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf_8m_a5144f11414a742574b0b4aeb7fd3f7f6}\label{nnmf_8m_a5144f11414a742574b0b4aeb7fd3f7f6}} 
+\index{nnmf.m@{nnmf.m}!size@{size}}
+\index{size@{size}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily a size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{nnmf_8m_a9587941b8675242573eb07ccfb44d87c}\label{nnmf_8m_a9587941b8675242573eb07ccfb44d87c}} 
+\index{nnmf.m@{nnmf.m}!warning@{warning}}
+\index{warning@{warning}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{warning()}{warning()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily end Revert warning setting for rank\+Deficient\+Matrix to value prior to \mbox{\hyperlink{classnnmf}{nnmf}} \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_a334cf54cd589e0e8bb079c4d11c444a1}{use\+Pool}} On workers and \mbox{\hyperlink{nnmf_8m_a58ab1fd68e97078232808206b850161b}{on}} client pct\+Run\+On\+All warning (\begin{DoxyParamCaption}\item[{internal.\+stats.\+parallel.\+stat\+Parallel\+Store(\textquotesingle{}rank\+Deficient\+Matrix\textquotesingle{}).}]{state,  }\item[{\textquotesingle{}MATLAB\+:rank\+Deficient\+Matrix\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf_8m_aacb32e0bfb2e4cca0a51b786b646739c}\label{nnmf_8m_aacb32e0bfb2e4cca0a51b786b646739c}} 
+\index{nnmf.m@{nnmf.m}!warning@{warning}}
+\index{warning@{warning}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{warning()}{warning()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily else \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} use\+Parallel warning (\begin{DoxyParamCaption}\item[{message( \textquotesingle{}stats\+:nnmf\+:display\+Parallel\textquotesingle{})}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf_8m_ab42d751f6008eb2ea7fa87fa8da60b24}\label{nnmf_8m_ab42d751f6008eb2ea7fa87fa8da60b24}} 
+\index{nnmf.m@{nnmf.m}!warning@{warning}}
+\index{warning@{warning}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{warning()}{warning()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily else On client warning (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{nnmf_8m_a2b12d4efe07a63e789d89566d94ae700}{ws}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf_8m_ac10134e7927e8587c77ad1a59d4b6b67}\label{nnmf_8m_ac10134e7927e8587c77ad1a59d4b6b67}} 
+\index{nnmf.m@{nnmf.m}!````~isscalar@{$\sim$isscalar}}
+\index{````~isscalar@{$\sim$isscalar}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$isscalar()}{~isscalar()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} $\sim$isscalar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{nnmf_8m_a35a892e11201b49e063b0ddf475c1c9c}{k}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nnmf_8m_a5d1e6b0cf88185459e93757c69c928f1}\label{nnmf_8m_a5d1e6b0cf88185459e93757c69c928f1}} 
+\index{nnmf.m@{nnmf.m}!````~isscalar@{$\sim$isscalar}}
+\index{````~isscalar@{$\sim$isscalar}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$isscalar()}{~isscalar()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} $\sim$isscalar (\begin{DoxyParamCaption}\item[{tries}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{nnmf_8m_a3a76cbb6e504bf475810f39404bbf3d0}\label{nnmf_8m_a3a76cbb6e504bf475810f39404bbf3d0}} 
+\index{nnmf.m@{nnmf.m}!alg@{alg}}
+\index{alg@{alg}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{alg}{alg}}
+{\footnotesize\ttfamily Check optional arguments alg = internal.\+stats.\+get\+Param\+Val(alg,\{\textquotesingle{}mult\textquotesingle{} \textquotesingle{}als\textquotesingle{}\},\textquotesingle{}ALGORITHM\textquotesingle{})}
+
+\mbox{\Hypertarget{nnmf_8m_ab4a39f23da578f9b1b457eab1e7c7c25}\label{nnmf_8m_ab4a39f23da578f9b1b457eab1e7c7c25}} 
+\index{nnmf.m@{nnmf.m}!BIPLOT@{BIPLOT}}
+\index{BIPLOT@{BIPLOT}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{BIPLOT}{BIPLOT}}
+{\footnotesize\ttfamily See also BIPLOT = \mbox{\hyperlink{classnnmf}{nnmf}}(\mbox{\hyperlink{nnmf_8m_aa010110f98c319fdcf8693409a4c7bca}{x}},5,\textquotesingle{}w0\textquotesingle{},\mbox{\hyperlink{nnmf_8m_a572953ea011800ee6ea385fc04bd6a15}{w}},\textquotesingle{}\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}}\textquotesingle{},\mbox{\hyperlink{nnmf_8m_aeaa46e7726a6a7e4a0a3c900767e1d9c}{h}},\textquotesingle{}\mbox{\hyperlink{nnmf_8m_a95ab9b93bf03aa54f98c7a5e28e526ff}{opt}}\textquotesingle{},\mbox{\hyperlink{nnmf_8m_a95ab9b93bf03aa54f98c7a5e28e526ff}{opt}},\textquotesingle{}\mbox{\hyperlink{nnmf_8m_a3a76cbb6e504bf475810f39404bbf3d0}{alg}}\textquotesingle{},\textquotesingle{}als\textquotesingle{})}
+
+\mbox{\Hypertarget{nnmf_8m_a387fd63a2085b150ab79938dd4863b6a}\label{nnmf_8m_a387fd63a2085b150ab79938dd4863b6a}} 
+\index{nnmf.m@{nnmf.m}!case@{case}}
+\index{case@{case}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{case}{case}}
+{\footnotesize\ttfamily Special case}
+
+\mbox{\Hypertarget{nnmf_8m_a848b570d14780b528244c5f7161feda9}\label{nnmf_8m_a848b570d14780b528244c5f7161feda9}} 
+\index{nnmf.m@{nnmf.m}!cellout@{cellout}}
+\index{cellout@{cellout}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{cellout}{cellout}}
+{\footnotesize\ttfamily cellout = \mbox{\hyperlink{nnmf_8m_a9788ce2dbc4cfc0b05332d27d78089df}{whtry}}}
+
+\mbox{\Hypertarget{nnmf_8m_a1daf73218cd6c9ad208e1948485f2215}\label{nnmf_8m_a1daf73218cd6c9ad208e1948485f2215}} 
+\index{nnmf.m@{nnmf.m}!computing@{computing}}
+\index{computing@{computing}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{computing}{computing}}
+{\footnotesize\ttfamily Display progress For parallel computing}
+
+\mbox{\Hypertarget{nnmf_8m_ad78f871af211e472eea827e9cb72aeb2}\label{nnmf_8m_ad78f871af211e472eea827e9cb72aeb2}} 
+\index{nnmf.m@{nnmf.m}!d@{d}}
+\index{d@{d}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{d}{d}}
+{\footnotesize\ttfamily end Get norm of difference and max change in factors d = a -\/ \mbox{\hyperlink{nnmf_8m_a572953ea011800ee6ea385fc04bd6a15}{w}}$\ast$\mbox{\hyperlink{nnmf_8m_aeaa46e7726a6a7e4a0a3c900767e1d9c}{h}}}
+
+\mbox{\Hypertarget{nnmf_8m_a96484a0355b5397f8d3fc5e844e7346e}\label{nnmf_8m_a96484a0355b5397f8d3fc5e844e7346e}} 
+\index{nnmf.m@{nnmf.m}!defaultopt@{defaultopt}}
+\index{defaultopt@{defaultopt}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{defaultopt}{defaultopt}}
+{\footnotesize\ttfamily end defaultopt = statset(\textquotesingle{}\mbox{\hyperlink{classnnmf}{nnmf}}\textquotesingle{})}
+
+\mbox{\Hypertarget{nnmf_8m_a66db7c5e4e9699c54207ab857ae72cb7}\label{nnmf_8m_a66db7c5e4e9699c54207ab857ae72cb7}} 
+\index{nnmf.m@{nnmf.m}!delta@{delta}}
+\index{delta@{delta}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{delta}{delta}}
+{\footnotesize\ttfamily delta = max(\mbox{\hyperlink{nnmf_8m_a0ed3b2d31e94aed73be91c6b7ca626ef}{dw}},\mbox{\hyperlink{nnmf_8m_adde87296d4bfd7289a799bbffa413d91}{dh}})}
+
+\mbox{\Hypertarget{nnmf_8m_a2916255af6ab4618ac4e382d6cbfcdb3}\label{nnmf_8m_a2916255af6ab4618ac4e382d6cbfcdb3}} 
+\index{nnmf.m@{nnmf.m}!dflts@{dflts}}
+\index{dflts@{dflts}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{dflts}{dflts}}
+{\footnotesize\ttfamily dflts = \{\textquotesingle{}als\textquotesingle{} \mbox{[}$\,$\mbox{]} \mbox{[}$\,$\mbox{]} 1 \mbox{[}$\,$\mbox{]} \}}
+
+\mbox{\Hypertarget{nnmf_8m_adde87296d4bfd7289a799bbffa413d91}\label{nnmf_8m_adde87296d4bfd7289a799bbffa413d91}} 
+\index{nnmf.m@{nnmf.m}!dh@{dh}}
+\index{dh@{dh}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{dh}{dh}}
+{\footnotesize\ttfamily dh = max(max(abs(\mbox{\hyperlink{nnmf_8m_aeaa46e7726a6a7e4a0a3c900767e1d9c}{h}}-\/\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}}) / (\mbox{\hyperlink{nnmf_8m_a4fe840ad672382f0d765d2932ad1598d}{sqrteps}}+max(max(abs(\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}}))))))}
+
+\mbox{\Hypertarget{nnmf_8m_a0eb7bf8b8a9c2ca743c14e5b71e6867a}\label{nnmf_8m_a0eb7bf8b8a9c2ca743c14e5b71e6867a}} 
+\index{nnmf.m@{nnmf.m}!dispfmt@{dispfmt}}
+\index{dispfmt@{dispfmt}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{dispfmt}{dispfmt}}
+{\footnotesize\ttfamily else dispfmt = \textquotesingle{}\%8d\textbackslash{}t\%8d\textbackslash{}t\%8d\textbackslash{}t\%14g\textbackslash{}t\%14g\textbackslash{}n\textquotesingle{}}
+
+\mbox{\Hypertarget{nnmf_8m_afbc3681eda88f3216c7263e31b69a052}\label{nnmf_8m_afbc3681eda88f3216c7263e31b69a052}} 
+\index{nnmf.m@{nnmf.m}!dispnum@{dispnum}}
+\index{dispnum@{dispnum}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{dispnum}{dispnum}}
+{\footnotesize\ttfamily dispnum = dispnum -\/ 1}
+
+\mbox{\Hypertarget{nnmf_8m_a6f3cd405f68142c7dd1a85d76150540f}\label{nnmf_8m_a6f3cd405f68142c7dd1a85d76150540f}} 
+\index{nnmf.m@{nnmf.m}!dispopt@{dispopt}}
+\index{dispopt@{dispopt}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{dispopt}{dispopt}}
+{\footnotesize\ttfamily dispopt = statget(options,\textquotesingle{}Display\textquotesingle{},\mbox{\hyperlink{nnmf_8m_a96484a0355b5397f8d3fc5e844e7346e}{defaultopt}},\textquotesingle{}fast\textquotesingle{})}
+
+\mbox{\Hypertarget{nnmf_8m_a2365e4dbcd9c879d59c0c07baa50bf02}\label{nnmf_8m_a2365e4dbcd9c879d59c0c07baa50bf02}} 
+\index{nnmf.m@{nnmf.m}!dnorm@{dnorm}}
+\index{dnorm@{dnorm}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{dnorm}{dnorm}}
+{\footnotesize\ttfamily dnorm = sqrt(sum(sum(d.$^\wedge$2))/nm)}
+
+\mbox{\Hypertarget{nnmf_8m_a0ed3b2d31e94aed73be91c6b7ca626ef}\label{nnmf_8m_a0ed3b2d31e94aed73be91c6b7ca626ef}} 
+\index{nnmf.m@{nnmf.m}!dw@{dw}}
+\index{dw@{dw}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{dw}{dw}}
+{\footnotesize\ttfamily dw = max(max(abs(\mbox{\hyperlink{nnmf_8m_a572953ea011800ee6ea385fc04bd6a15}{w}}-\/w0) / (\mbox{\hyperlink{nnmf_8m_a4fe840ad672382f0d765d2932ad1598d}{sqrteps}}+max(max(abs(w0))))))}
+
+\mbox{\Hypertarget{nnmf_8m_a9f9d5c65e8649bc202b6997c7f9d41af}\label{nnmf_8m_a9f9d5c65e8649bc202b6997c7f9d41af}} 
+\index{nnmf.m@{nnmf.m}!factorization@{factorization}}
+\index{factorization@{factorization}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{factorization}{factorization}}
+{\footnotesize\ttfamily end Perform a factorization\mbox{[}\mbox{\hyperlink{nnmf_8m_a9788ce2dbc4cfc0b05332d27d78089df}{whtry}}\{3\}, \mbox{\hyperlink{nnmf_8m_a9788ce2dbc4cfc0b05332d27d78089df}{whtry}}\{4\}, \mbox{\hyperlink{nnmf_8m_a9788ce2dbc4cfc0b05332d27d78089df}{whtry}}\{1\}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= ...}
+\DoxyCodeLine{            nnmf1(a,\mbox{\hyperlink{nnmf_8m_a9788ce2dbc4cfc0b05332d27d78089df}{whtry}}\{3\},\mbox{\hyperlink{nnmf_8m_a9788ce2dbc4cfc0b05332d27d78089df}{whtry}}\{4\},\mbox{\hyperlink{nnmf_8m_a80e8255e431350121275c03c1b97c94a}{ismult}},\mbox{\hyperlink{nnmf_8m_a46bb007d223fe0b24732e6c9a65175b3}{maxiter}},\mbox{\hyperlink{nnmf_8m_abb7efdac5083cc82dff8d669d5a9bd94}{tolfun}},\mbox{\hyperlink{nnmf_8m_aa82cfb9e59d529e0e4ac76ab846cc46d}{tolx}},...}
+\DoxyCodeLine{                                  \mbox{\hyperlink{nnmf_8m_afbc3681eda88f3216c7263e31b69a052}{dispnum}},iter,\mbox{\hyperlink{nnmf_8m_a334cf54cd589e0e8bb079c4d11c444a1}{usePool}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{nnmf_8m_afc87b3624b681db9885f5cc532a3cb9f}\label{nnmf_8m_afc87b3624b681db9885f5cc532a3cb9f}} 
+\index{nnmf.m@{nnmf.m}!function@{function}}
+\index{function@{function}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}\mbox{\hyperlink{nnmf_8m_a2ec5bea17d4c018fb91145a85fbb3052}{wbest}}, \mbox{\hyperlink{nnmf_8m_a0b99c133ce7291aaa8bd9bd4d17ec994}{hbest}}, \mbox{\hyperlink{nnmf_8m_a77363e7cb0166a2530030b65b2849f1b}{normbest}}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{classnnmf}{nnmf}}(a,\mbox{\hyperlink{nnmf_8m_a35a892e11201b49e063b0ddf475c1c9c}{k}},varargin)}
+\DoxyCodeLine{\%NNMF Non-\/negative \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{nnmf_8m_a9f9d5c65e8649bc202b6997c7f9d41af}{factorization}}.}
+\DoxyCodeLine{\%   [\mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}},\mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}}] = NNMF(A,K) factors the N-\/by-\/M \mbox{\hyperlink{classmatrix}{matrix}} A into non-\/negative factors}
+\DoxyCodeLine{\%   \mbox{\hyperlink{nnmf___jessica_8m_a0a9b52fb6605edc74fd7d5359f34477e}{W}} (N-\/by-\/K) and \mbox{\hyperlink{nnmf___jessica_8m_afaafc315b95987fc2b071bcd8f698b81}{H}} (K-\/by-\/M).  The result is not an exact \mbox{\hyperlink{nnmf_8m_a9f9d5c65e8649bc202b6997c7f9d41af}{factorization}}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{nnmf_8m_aeaa46e7726a6a7e4a0a3c900767e1d9c}\label{nnmf_8m_aeaa46e7726a6a7e4a0a3c900767e1d9c}} 
+\index{nnmf.m@{nnmf.m}!h@{h}}
+\index{h@{h}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{h}{h}}
+{\footnotesize\ttfamily else Alternating least squares h = max(0,\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}} .$\ast$ (\mbox{\hyperlink{nnmf_8m_aba586fac0864d45085934cdd0b475c6f}{numer}} ./ ((w0\textquotesingle{}$\ast$w0)$\ast$\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}} + eps(\mbox{\hyperlink{nnmf_8m_aba586fac0864d45085934cdd0b475c6f}{numer}}))))}
+
+\mbox{\Hypertarget{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}\label{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}} 
+\index{nnmf.m@{nnmf.m}!h0@{h0}}
+\index{h0@{h0}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{h0}{h0}}
+{\footnotesize\ttfamily h0 = eye(\mbox{\hyperlink{nnmf_8m_a35a892e11201b49e063b0ddf475c1c9c}{k}})}
+
+\mbox{\Hypertarget{nnmf_8m_a0b99c133ce7291aaa8bd9bd4d17ec994}\label{nnmf_8m_a0b99c133ce7291aaa8bd9bd4d17ec994}} 
+\index{nnmf.m@{nnmf.m}!hbest@{hbest}}
+\index{hbest@{hbest}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{hbest}{hbest}}
+{\footnotesize\ttfamily hbest = \mbox{\hyperlink{nnmf_8m_aa82a4be85bb658ceab89a63864c0127f}{whbest}}\{4\}}
+
+\mbox{\Hypertarget{nnmf_8m_a5d9dd41a50edb71e9d63c67852759eb0}\label{nnmf_8m_a5d9dd41a50edb71e9d63c67852759eb0}} 
+\index{nnmf.m@{nnmf.m}!hLines@{hLines}}
+\index{hLines@{hLines}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{hLines}{hLines}}
+{\footnotesize\ttfamily h\+Lines = gscatter(\mbox{\hyperlink{nnmf_8m_a572953ea011800ee6ea385fc04bd6a15}{w}}(\+:,1),\mbox{\hyperlink{nnmf_8m_a572953ea011800ee6ea385fc04bd6a15}{w}}(\+:,2),species)}
+
+\mbox{\Hypertarget{nnmf_8m_a80e8255e431350121275c03c1b97c94a}\label{nnmf_8m_a80e8255e431350121275c03c1b97c94a}} 
+\index{nnmf.m@{nnmf.m}!ismult@{ismult}}
+\index{ismult@{ismult}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{ismult}{ismult}}
+{\footnotesize\ttfamily ismult = strncmp(\textquotesingle{}mult\textquotesingle{},\mbox{\hyperlink{nnmf_8m_a3a76cbb6e504bf475810f39404bbf3d0}{alg}},\mbox{\hyperlink{nnmf_8m_ab1ae3dfa90cc21cb2c639ff660f8ae07}{numel}}(\mbox{\hyperlink{nnmf_8m_a3a76cbb6e504bf475810f39404bbf3d0}{alg}}))}
+
+\mbox{\Hypertarget{nnmf_8m_a5f1e516005b0dfe6e3e764fee1efb413}\label{nnmf_8m_a5f1e516005b0dfe6e3e764fee1efb413}} 
+\index{nnmf.m@{nnmf.m}!j@{j}}
+\index{j@{j}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{j}{j}}
+{\footnotesize\ttfamily end end for j}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=1:\mbox{\hyperlink{nnmf_8m_a46bb007d223fe0b24732e6c9a65175b3}{maxiter}}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} \mbox{\hyperlink{nnmf_8m_a80e8255e431350121275c03c1b97c94a}{ismult}}}
+\DoxyCodeLine{        \% Multiplicative update formula}
+\DoxyCodeLine{        \mbox{\hyperlink{nnmf_8m_aba586fac0864d45085934cdd0b475c6f}{numer}} = w0\textcolor{stringliteral}{'*a}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{nnmf_8m_a35a892e11201b49e063b0ddf475c1c9c}\label{nnmf_8m_a35a892e11201b49e063b0ddf475c1c9c}} 
+\index{nnmf.m@{nnmf.m}!k@{k}}
+\index{k@{k}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily else for k}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=round(\mbox{\hyperlink{nnmf_8m_a35a892e11201b49e063b0ddf475c1c9c}{k}})}
+\DoxyCodeLine{    error(message(\textcolor{stringliteral}{'stats:nnmf:BadK'}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{nnmf_8m_abedc42a712458600524379cd7748f8af}\label{nnmf_8m_abedc42a712458600524379cd7748f8af}} 
+\index{nnmf.m@{nnmf.m}!labindx@{labindx}}
+\index{labindx@{labindx}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{labindx}{labindx}}
+{\footnotesize\ttfamily Display progress For parallel the replicate number will be displayed under the worker performing the replicate \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_afbc3681eda88f3216c7263e31b69a052}{dispnum}} final or iter \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} \mbox{\hyperlink{nnmf_8m_a334cf54cd589e0e8bb079c4d11c444a1}{use\+Pool}} labindx = internal.\+stats.\+parallel.\+worker\+Get\+Value(\textquotesingle{}worker\+ID\textquotesingle{})}
+
+\mbox{\Hypertarget{nnmf_8m_a209e990864a6b83621dc40aa260a7ca2}\label{nnmf_8m_a209e990864a6b83621dc40aa260a7ca2}} 
+\index{nnmf.m@{nnmf.m}!loopbody@{loopbody}}
+\index{loopbody@{loopbody}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{loopbody}{loopbody}}
+{\footnotesize\ttfamily end end Define the \mbox{\hyperlink{nnmf_8m_afc87b3624b681db9885f5cc532a3cb9f}{function}} that will perform one \mbox{\hyperlink{nnmf___jessica_8m_a97f9c2753f848b831c6c8f7ba42f5339}{iteration}} of the loop inside smart\+For loopbody = @loop\+Body}
+
+\mbox{\Hypertarget{nnmf_8m_a46bb007d223fe0b24732e6c9a65175b3}\label{nnmf_8m_a46bb007d223fe0b24732e6c9a65175b3}} 
+\index{nnmf.m@{nnmf.m}!maxiter@{maxiter}}
+\index{maxiter@{maxiter}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{maxiter}{maxiter}}
+{\footnotesize\ttfamily maxiter = statget(options,\textquotesingle{}Max\+Iter\textquotesingle{},\mbox{\hyperlink{nnmf_8m_a96484a0355b5397f8d3fc5e844e7346e}{defaultopt}},\textquotesingle{}fast\textquotesingle{})}
+
+\mbox{\Hypertarget{nnmf_8m_a77363e7cb0166a2530030b65b2849f1b}\label{nnmf_8m_a77363e7cb0166a2530030b65b2849f1b}} 
+\index{nnmf.m@{nnmf.m}!normbest@{normbest}}
+\index{normbest@{normbest}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{normbest}{normbest}}
+{\footnotesize\ttfamily end \mbox{\hyperlink{nnmf_8m_aac6f95d557c28fd0c7aa46ebfe148d32}{if}} normbest = \mbox{\hyperlink{nnmf_8m_aa82a4be85bb658ceab89a63864c0127f}{whbest}}\{1\}}
+
+\mbox{\Hypertarget{nnmf_8m_aba586fac0864d45085934cdd0b475c6f}\label{nnmf_8m_aba586fac0864d45085934cdd0b475c6f}} 
+\index{nnmf.m@{nnmf.m}!numer@{numer}}
+\index{numer@{numer}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{numer}{numer}}
+{\footnotesize\ttfamily numer = a$\ast$\mbox{\hyperlink{nnmf_8m_aeaa46e7726a6a7e4a0a3c900767e1d9c}{h}}\textquotesingle{}}
+
+\mbox{\Hypertarget{nnmf_8m_a835accca41274fb237599d9b3c117fcf}\label{nnmf_8m_a835accca41274fb237599d9b3c117fcf}} 
+\index{nnmf.m@{nnmf.m}!off@{off}}
+\index{off@{off}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{off}{off}}
+{\footnotesize\ttfamily hold off}
+
+\mbox{\Hypertarget{nnmf_8m_a58ab1fd68e97078232808206b850161b}\label{nnmf_8m_a58ab1fd68e97078232808206b850161b}} 
+\index{nnmf.m@{nnmf.m}!on@{on}}
+\index{on@{on}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{on}{on}}
+{\footnotesize\ttfamily hold on}
+
+\mbox{\Hypertarget{nnmf_8m_a95ab9b93bf03aa54f98c7a5e28e526ff}\label{nnmf_8m_a95ab9b93bf03aa54f98c7a5e28e526ff}} 
+\index{nnmf.m@{nnmf.m}!opt@{opt}}
+\index{opt@{opt}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{opt}{opt}}
+{\footnotesize\ttfamily opt = statset(\textquotesingle{}\mbox{\hyperlink{nnmf_8m_a46bb007d223fe0b24732e6c9a65175b3}{maxiter}}\textquotesingle{},5,\textquotesingle{}display\textquotesingle{},\textquotesingle{}final\textquotesingle{})}
+
+\mbox{\Hypertarget{nnmf_8m_a1bf7c90d3cd6a93f116a908ddfcd7c66}\label{nnmf_8m_a1bf7c90d3cd6a93f116a908ddfcd7c66}} 
+\index{nnmf.m@{nnmf.m}!PCA@{PCA}}
+\index{PCA@{PCA}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{PCA}{PCA}}
+{\footnotesize\ttfamily See also PCA}
+
+\mbox{\Hypertarget{nnmf_8m_adef86b11d518828ef272f58a653482ef}\label{nnmf_8m_adef86b11d518828ef272f58a653482ef}} 
+\index{nnmf.m@{nnmf.m}!pnames@{pnames}}
+\index{pnames@{pnames}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{pnames}{pnames}}
+{\footnotesize\ttfamily end Process optional arguments pnames = \{\textquotesingle{}algorithm\textquotesingle{} \textquotesingle{}w0\textquotesingle{} \textquotesingle{}\mbox{\hyperlink{nnmf_8m_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}}\textquotesingle{} \textquotesingle{}replicates\textquotesingle{} \textquotesingle{}options\textquotesingle{}\}}
+
+\mbox{\Hypertarget{nnmf_8m_a4fe840ad672382f0d765d2932ad1598d}\label{nnmf_8m_a4fe840ad672382f0d765d2932ad1598d}} 
+\index{nnmf.m@{nnmf.m}!sqrteps@{sqrteps}}
+\index{sqrteps@{sqrteps}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{sqrteps}{sqrteps}}
+{\footnotesize\ttfamily sqrteps = sqrt(eps)}
+
+\mbox{\Hypertarget{nnmf_8m_a079514cb1e280db72de566b2eafe2c72}\label{nnmf_8m_a079514cb1e280db72de566b2eafe2c72}} 
+\index{nnmf.m@{nnmf.m}!STATSET@{STATSET}}
+\index{STATSET@{STATSET}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{STATSET}{STATSET}}
+{\footnotesize\ttfamily See also STATSET}
+
+\mbox{\Hypertarget{nnmf_8m_abb7efdac5083cc82dff8d669d5a9bd94}\label{nnmf_8m_abb7efdac5083cc82dff8d669d5a9bd94}} 
+\index{nnmf.m@{nnmf.m}!tolfun@{tolfun}}
+\index{tolfun@{tolfun}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{tolfun}{tolfun}}
+{\footnotesize\ttfamily tolfun = statget(options,\textquotesingle{}Tol\+Fun\textquotesingle{},\mbox{\hyperlink{nnmf_8m_a96484a0355b5397f8d3fc5e844e7346e}{defaultopt}},\textquotesingle{}fast\textquotesingle{})}
+
+\mbox{\Hypertarget{nnmf_8m_aa82cfb9e59d529e0e4ac76ab846cc46d}\label{nnmf_8m_aa82cfb9e59d529e0e4ac76ab846cc46d}} 
+\index{nnmf.m@{nnmf.m}!tolx@{tolx}}
+\index{tolx@{tolx}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{tolx}{tolx}}
+{\footnotesize\ttfamily tolx = statget(options,\textquotesingle{}TolX\textquotesingle{},\mbox{\hyperlink{nnmf_8m_a96484a0355b5397f8d3fc5e844e7346e}{defaultopt}},\textquotesingle{}fast\textquotesingle{})}
+
+\mbox{\Hypertarget{nnmf_8m_a334cf54cd589e0e8bb079c4d11c444a1}\label{nnmf_8m_a334cf54cd589e0e8bb079c4d11c444a1}} 
+\index{nnmf.m@{nnmf.m}!usePool@{usePool}}
+\index{usePool@{usePool}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{usePool}{usePool}}
+{\footnotesize\ttfamily use\+Pool = use\+Parallel \&\& poolsz$>$0}
+
+\mbox{\Hypertarget{nnmf_8m_a572953ea011800ee6ea385fc04bd6a15}\label{nnmf_8m_a572953ea011800ee6ea385fc04bd6a15}} 
+\index{nnmf.m@{nnmf.m}!w@{w}}
+\index{w@{w}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{w}{w}}
+{\footnotesize\ttfamily w = sort(sum(wbest.$^\wedge$2,1),\textquotesingle{}descend\textquotesingle{})}
+
+\mbox{\Hypertarget{nnmf_8m_a2ec5bea17d4c018fb91145a85fbb3052}\label{nnmf_8m_a2ec5bea17d4c018fb91145a85fbb3052}} 
+\index{nnmf.m@{nnmf.m}!wbest@{wbest}}
+\index{wbest@{wbest}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{wbest}{wbest}}
+{\footnotesize\ttfamily end wbest = \mbox{\hyperlink{nnmf_8m_aa82a4be85bb658ceab89a63864c0127f}{whbest}}\{3\}}
+
+\mbox{\Hypertarget{nnmf_8m_aa82a4be85bb658ceab89a63864c0127f}\label{nnmf_8m_aa82a4be85bb658ceab89a63864c0127f}} 
+\index{nnmf.m@{nnmf.m}!whbest@{whbest}}
+\index{whbest@{whbest}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{whbest}{whbest}}
+{\footnotesize\ttfamily whbest}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{keyword}{internal}.stats.parallel.smartForReduce(...}
+\DoxyCodeLine{        tries, \mbox{\hyperlink{nnmf_8m_a209e990864a6b83621dc40aa260a7ca2}{loopbody}}, useParallel, RNGscheme, \textcolor{stringliteral}{'argmin'})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{nnmf_8m_a9788ce2dbc4cfc0b05332d27d78089df}\label{nnmf_8m_a9788ce2dbc4cfc0b05332d27d78089df}} 
+\index{nnmf.m@{nnmf.m}!whtry@{whtry}}
+\index{whtry@{whtry}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{whtry}{whtry}}
+{\footnotesize\ttfamily else whtry = cell(4,1)}
+
+\mbox{\Hypertarget{nnmf_8m_a2b12d4efe07a63e789d89566d94ae700}\label{nnmf_8m_a2b12d4efe07a63e789d89566d94ae700}} 
+\index{nnmf.m@{nnmf.m}!ws@{ws}}
+\index{ws@{ws}!nnmf.m@{nnmf.m}}
+\doxysubsubsection{\texorpdfstring{ws}{ws}}
+{\footnotesize\ttfamily else On client ws = \mbox{\hyperlink{nnmf_8m_aacb32e0bfb2e4cca0a51b786b646739c}{warning}}(\textquotesingle{}\mbox{\hyperlink{nnmf_8m_a835accca41274fb237599d9b3c117fcf}{off}}\textquotesingle{},\textquotesingle{}MATLAB\+:rank\+Deficient\+Matrix\textquotesingle{})}
+
