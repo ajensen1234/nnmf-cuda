@@ -3,7 +3,7 @@
 
 #pragma once
 
-#include <string>
+#include <string.h>
 #include <memory.h>
 #include "math/matrix.h"
 #include "io/csv_reader.h"
